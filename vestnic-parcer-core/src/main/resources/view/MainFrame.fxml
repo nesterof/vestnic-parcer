@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="view.FXMLExampleController"  xmlns:fx="http://javafx.com/fxml" alignment="TOP_LEFT" hgap="10" vgap="10" styleClass="root">
+    <Text id="input-text-label" text="XML ввод:" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1"/>
+    <HBox spacing="0" alignment="TOP_LEFT"
+          GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Button text="Выберете файл"
+                onAction="#uploadImportFile"/>
+    </HBox>
+    <Text id="input_file_name" text="......." GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="1"/>
+
+</GridPane>
