@@ -59,7 +59,8 @@ public class FXMLExampleController {
         try {
             checkFileName();
 
-            XLTController.parceXLT(input_file_name.getText(), output_file_name.getText(), transformationList.getSelectionModel().getSelectedItem());
+            XLTController.getInstance().parceXLT(input_file_name.getText(), output_file_name.getText(), transformationList.getSelectionModel().getSelectedItem() == null ?
+                    transformationList.getPromptText() : transformationList.getSelectionModel().getSelectedItem() );
 
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);

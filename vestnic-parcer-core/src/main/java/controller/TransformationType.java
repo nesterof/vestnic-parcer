@@ -1,6 +1,6 @@
 package controller;
 
-public enum TransformationType {
+public enum TransformationType{
     DOAJ("doaj.xslt");
 
     private String filePath;
@@ -8,4 +8,9 @@ public enum TransformationType {
     TransformationType(String filePath) {
         this.filePath = filePath;
     }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
 }
