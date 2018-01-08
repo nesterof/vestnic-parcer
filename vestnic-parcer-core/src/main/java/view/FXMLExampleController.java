@@ -3,6 +3,7 @@ package view;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 
@@ -15,6 +16,9 @@ public class FXMLExampleController {
 
     @FXML
     private Text output_file_name;
+
+    @FXML
+    private ComboBox<String> transformationList;
 
     @FXML
     protected void uploadImportFile(ActionEvent event) {
@@ -42,7 +46,7 @@ public class FXMLExampleController {
 
         final FileChooser fileChooser = createXMLFileChooser("Выберете XML имя преобразованного файла");
 
-        File file = fileChooser.showOpenDialog(null);
+        File file = fileChooser.showSaveDialog(null);
         if (file != null) {
             output_file_name.setText(file.getName());
         }
@@ -50,13 +54,25 @@ public class FXMLExampleController {
 
     @FXML
     protected void transformFile(ActionEvent event) {
-//        if(checkFileName()) {
-//
-//        }
+        try {
+            checkFileName();
+
+
+
+
+        } catch (Exception e) {
+
+        }
     }
 
-//    private boolean checkFileName() {
-//        if()
-//        return false;
-//    }
+    private boolean checkFileName() throws Exception {
+        if(input_file_name.getText() == null || input_file_name.getText().isEmpty()) {
+            throw new Exception("Не выбранно имя входного файла");
+        }
+        if(output_file_name.getText() == null || output_file_name.getText().isEmpty()) {
+            throw new Exception("Не выбранно имя выходного файла");
+        }
+
+        return false;
+    }
 }

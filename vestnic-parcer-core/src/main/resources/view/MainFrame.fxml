@@ -8,6 +8,7 @@
 
 <?import javafx.scene.shape.Line?>
 <?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <GridPane fx:controller="view.FXMLExampleController" xmlns:fx="http://javafx.com/fxml" alignment="TOP_LEFT" hgap="200" vgap="10" styleClass="root">
     <Text id="input-text-label" text="XML ввод:" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1"/>
     <HBox spacing="0" alignment="TOP_LEFT"
@@ -25,8 +26,18 @@
     </HBox>
     <Text fx:id="output_file_name" text="......." GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="1"/>
 
+    <Text text="Выберете тип преобразования:" GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="1"/>
+
+    <ComboBox fx:id="transformationList" GridPane.columnIndex="0" GridPane.rowIndex="8" promptText="Doaj">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Doaj" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
     <HBox spacing="0" alignment="TOP_CENTER"
-          GridPane.columnIndex="0" GridPane.rowIndex="7">
+          GridPane.columnIndex="0" GridPane.rowIndex="9">
         <Button text="Преобразовать"
                 onAction="#transformFile"/>
     </HBox>
