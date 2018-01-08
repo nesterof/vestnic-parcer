@@ -13,30 +13,50 @@ public class FXMLExampleController {
     @FXML
     private Text input_file_name;
 
+    @FXML
+    private Text output_file_name;
 
     @FXML
     protected void uploadImportFile(ActionEvent event) {
 
-        final FileChooser fileChooser = new FileChooser();
+        final FileChooser fileChooser = createXMLFileChooser("Выберете XML для импорта");
 
-        fileChooser.setTitle("Выберете XML для импорта");
         File file = fileChooser.showOpenDialog(null);
         if (file != null) {
-            input_file_name.setText(file.getName());
+            input_file_name.setText(file.getPath());
         }
 
+    }
+
+    private FileChooser createXMLFileChooser(String title) {
+        final FileChooser fileChooser = new FileChooser();
+
+        fileChooser.setTitle(title);
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
+        fileChooser.getExtensionFilters().add(extFilter);
+        return fileChooser;
     }
 
     @FXML
     protected void uploadExportFile(ActionEvent event) {
 
-        final FileChooser fileChooser = new FileChooser();
+        final FileChooser fileChooser = createXMLFileChooser("Выберете XML имя преобразованного файла");
 
-        fileChooser.setTitle("Выберете XML для импорта");
         File file = fileChooser.showOpenDialog(null);
         if (file != null) {
-            input_file_name.setText(file.getName());
+            output_file_name.setText(file.getName());
         }
-
     }
+
+    @FXML
+    protected void transformFile(ActionEvent event) {
+//        if(checkFileName()) {
+//
+//        }
+    }
+
+//    private boolean checkFileName() {
+//        if()
+//        return false;
+//    }
 }

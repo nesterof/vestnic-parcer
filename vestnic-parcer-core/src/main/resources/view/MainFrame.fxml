@@ -6,13 +6,30 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:controller="view.FXMLExampleController"  xmlns:fx="http://javafx.com/fxml" alignment="TOP_LEFT" hgap="10" vgap="10" styleClass="root">
+<?import javafx.scene.shape.Line?>
+<?import javafx.collections.FXCollections?>
+<GridPane fx:controller="view.FXMLExampleController" xmlns:fx="http://javafx.com/fxml" alignment="TOP_LEFT" hgap="200" vgap="10" styleClass="root">
     <Text id="input-text-label" text="XML ввод:" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1"/>
     <HBox spacing="0" alignment="TOP_LEFT"
           GridPane.columnIndex="0" GridPane.rowIndex="1">
         <Button text="Выберете файл"
                 onAction="#uploadImportFile"/>
     </HBox>
-    <Text id="input_file_name" text="......." GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="1"/>
+    <Text fx:id="input_file_name" text="......." GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="1"/>
+
+    <Text id="output-text-label" text="XML вывод:" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1"/>
+    <HBox spacing="0" alignment="TOP_LEFT"
+          GridPane.columnIndex="0" GridPane.rowIndex="5">
+        <Button text="Выберете файл"
+                onAction="#uploadExportFile"/>
+    </HBox>
+    <Text fx:id="output_file_name" text="......." GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="1"/>
+
+    <HBox spacing="0" alignment="TOP_CENTER"
+          GridPane.columnIndex="0" GridPane.rowIndex="7">
+        <Button text="Преобразовать"
+                onAction="#transformFile"/>
+    </HBox>
+
 
 </GridPane>
