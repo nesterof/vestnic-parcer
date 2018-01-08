@@ -1,5 +1,6 @@
 package view;
 
+import controller.XLTController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -17,6 +18,7 @@ public class FXMLExampleController {
     @FXML
     private Text output_file_name;
 
+    private static final String DEFAULT_LABEL_VALUE = ".......";
     @FXML
     private ComboBox<String> transformationList;
 
@@ -48,7 +50,7 @@ public class FXMLExampleController {
 
         File file = fileChooser.showSaveDialog(null);
         if (file != null) {
-            output_file_name.setText(file.getName());
+            output_file_name.setText(file.getPath());
         }
     }
 
@@ -57,19 +59,20 @@ public class FXMLExampleController {
         try {
             checkFileName();
 
-
-
+            XLTController.parceXLT(input_file_name.getText(), output_file_name.getText(), transformationList.getSelectionModel().getSelectedItem());
 
         } catch (Exception e) {
-
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
         }
     }
 
     private boolean checkFileName() throws Exception {
-        if(input_file_name.getText() == null || input_file_name.getText().isEmpty()) {
+        if(input_file_name.getText() == null || input_file_name.getText().equals(DEFAULT_LABEL_VALUE)) {
             throw new Exception("Не выбранно имя входного файла");
         }
-        if(output_file_name.getText() == null || output_file_name.getText().isEmpty()) {
+        if(output_file_name.getText() == null || output_file_name.getText().equals(DEFAULT_LABEL_VALUE)) {
             throw new Exception("Не выбранно имя выходного файла");
         }
 
