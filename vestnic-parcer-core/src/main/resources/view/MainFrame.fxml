@@ -36,7 +36,7 @@
         </items>
     </ComboBox>
 
-    <HBox spacing="0" alignment="TOP_CENTER"
+    <HBox spacing="0" 
           GridPane.columnIndex="0" GridPane.rowIndex="9">
         <Button text="Преобразовать"
                 onAction="#transformFile"/>

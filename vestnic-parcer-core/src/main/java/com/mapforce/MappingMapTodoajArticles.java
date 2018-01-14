@@ -137,7 +137,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			}
 			private boolean moveNext_2() throws Exception {
 				state = 3;				
-				current = com.altova.functions.Core.createAttribute(com.altova.functions.Core.createQName("xsi:noNamespaceSchemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), com.altova.functions.Core.box("file:///E:/Downloads/doajArticles.xsd"));
+				current = com.altova.functions.Core.createAttribute(com.altova.functions.Core.createQName("xsi:noNamespaceSchemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), com.altova.functions.Core.box(getClass().getResource("doajArticles.xsd")));//"file:///E:/Downloads/doajArticles.xsd"));
 				pos++;
 				return true;
 			}

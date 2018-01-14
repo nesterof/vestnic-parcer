@@ -8,6 +8,8 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.io.IOException;
 
+import com.mapforce.DoajMappingConsole;
+
 public class XLTController {
 
     private static XLTController instance;
@@ -25,38 +27,8 @@ public class XLTController {
 
     public void parceXLT(String inputFilePath, String outputFilePath, String xltTemplate) throws Exception {
 
-        TransformationType transformationType = TransformationType.valueOf(xltTemplate.toUpperCase());
-
-        StreamSource stylesource = new StreamSource( getClass().getResourceAsStream(transformationType.getFilePath()));
-
-        TransformerFactory factory = TransformerFactory.newInstance();
-        Transformer transformer = factory.newTransformer(stylesource);
-
-        File inputFile = openFile(inputFilePath);
-        File outputFile = openFile(outputFilePath);
-        try {
-             inputFile = new File(inputFilePath);
-             outputFile = new File(outputFilePath);
-             outputFile.createNewFile();
-
-        } catch (IOException e) {
-            throw new Exception("Невозможно создать файл или перезаписать файл "
-                    + outputFilePath
-                    + "\n Причина:" + e.getMessage());
+            DoajMappingConsole.parceXLT(inputFilePath, outputFilePath);
         }
 
-        StreamResult outputResult = new StreamResult(outputFile);
-        StreamSource inputSource = new StreamSource(inputFile);
 
-        transformer.transform(inputSource, outputResult);
-    }
-
-
-    private File openFile(String filePath) throws Exception {
-        File file = new File(filePath);
-        if(file == null) {
-            throw new Exception("Невозможно открытть файл " + filePath);
-        }
-        return file;
-    }
 }

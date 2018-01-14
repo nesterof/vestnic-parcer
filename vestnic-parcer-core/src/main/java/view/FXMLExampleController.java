@@ -66,7 +66,12 @@ public class FXMLExampleController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText(e.getMessage());
             alert.showAndWait();
+            return;
         }
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Преобразованный файл успешно создан" +"\n" + output_file_name.getText());
+        alert.showAndWait();
     }
 
     private boolean checkFileName() throws Exception {
