@@ -11,10 +11,6 @@ public class Duration extends CalendarBase
 {
 	protected boolean bNegative;
 
-	public enum ParseType {
-		DURATION, YEARMONTH, DAYTIME
-	}
-
 	// construction
 	private Duration() 
 	{
@@ -83,7 +79,7 @@ public class Duration extends CalendarBase
 
 	public int getMillisecond() 
 	{
-		return (int)java.lang.Math.round(getPartSecond()*1000.0);
+		return (int) Math.round(getPartSecond()*1000.0);
 	}
 
 	public boolean isNegative() 
@@ -95,29 +91,7 @@ public class Duration extends CalendarBase
 	{
 		bNegative = isnegative;
 	}
-
-
-	public String toYearMonthString()
-	{
-		StringBuffer s = new StringBuffer();
-		if (bNegative)
-			s.append("-");
-		s.append("P");
-		if (year != 0) 
-		{
-			s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) java.lang.Math.abs(year) ) );
-			s.append("Y");
-		}
-		if (month != 0) 
-		{
-			s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) java.lang.Math.abs(month) ) );
-			s.append("M");
-		}
-		if (s.length() == 1)
-			s.append("0M");
-		return s.toString();
-	}
-
+	
 	public String toString() 
 	{
 		StringBuffer s = new StringBuffer();
@@ -126,17 +100,17 @@ public class Duration extends CalendarBase
 		s.append("P");
 		if (year != 0) 
 		{
-			s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) java.lang.Math.abs(year) ) );
+			s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) year) );
 			s.append("Y");
 		}
 		if (month != 0) 
 		{
-			s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) java.lang.Math.abs(month) ) );
+			s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) month) );
 			s.append("M");
 		}
 		if (day != 0) 
 		{
-			s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) java.lang.Math.abs(day) ) );
+			s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) day) );
 			s.append("D");
 		}
 		if (hour!=0 || minute!=0 || second!=0 || partsecond>0 )	
@@ -144,20 +118,19 @@ public class Duration extends CalendarBase
 			s.append("T");
 			if (hour != 0) 
 			{
-				s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) java.lang.Math.abs(hour)) );
+				s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) hour) );
 				s.append("H");
 			}
 			if (minute != 0) 
 			{
-				s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) java.lang.Math.abs(minute) ) );
+				s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) minute) );
 				s.append("M");
 			}
 			if (second != 0)
-				s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) java.lang.Math.abs(second) ) );
+				s.append(new DecimalFormat("0", new DecimalFormatSymbols(java.util.Locale.US)).format( (long) second) );
 			if (partsecond > 0 && partsecond < 1) 
 			{
-				String sPartSecond = new DecimalFormat("0.0########", new DecimalFormatSymbols(java.util.Locale.US)).format(partsecond);
-				if (second == 0) s.append("0");
+				String sPartSecond = new DecimalFormat("0.0###############", new DecimalFormatSymbols(java.util.Locale.US)).format(partsecond);
 				s.append(".");
 				s.append(sPartSecond.substring(2, sPartSecond.length()));
 			}
@@ -169,23 +142,15 @@ public class Duration extends CalendarBase
 		return s.toString();
 	}
 
-
 	public static Duration parse( String s )
 	{
 		Duration dur = new Duration();
-		dur.parseDuration( s, ParseType.DURATION );
-		return dur;
-	}
-
-	public static Duration parse( String s, ParseType pt )
-	{
-		Duration dur = new Duration();
-		dur.parseDuration( s, pt );
+		dur.parseDuration( s );
 		return dur;
 	}
 	
-	protected void parseDuration(String s, ParseType pt )
-	{
+	  protected void parseDuration(String s)
+	  {
 		String newvalue = s.trim();
 
 		if ( newvalue == null )
@@ -206,7 +171,7 @@ public class Duration extends CalendarBase
 		partsecond = 0.0;
 		month = 0;	
 		year = 0;
-
+				
 		if (newvalue.charAt(pos) == '-') 
 		{
 			bNegative = true;
@@ -223,7 +188,7 @@ public class Duration extends CalendarBase
 			// no more data allowed?
 			if (state == 8) 
 				throw new StringParseException("Extra data after duration value.", 2);
-
+							
 			// check if ymd part is over
 			if (newvalue.charAt(pos) == 'T') 
 			{
@@ -253,16 +218,16 @@ public class Duration extends CalendarBase
 
 			if (pos == newvalue.length()) 
 				throw new StringParseException("Duration value missing component designator.", 2);
-
+					
 			int foundState = 8;	// bad
 			switch (newvalue.charAt(pos)) 
 			{
-				case 'Y': if (state >= 4) foundState = 8; else foundState = 0; break;
-				case 'M': if (state >= 4) foundState = 5; else foundState = 1; break;
-				case 'D': if (state >= 4) foundState = 8; else foundState = 2; break;
-				case 'H': if (state >= 4) foundState = 4; else foundState = 8; break;
-				case 'S': if (state >= 7) foundState = 7; else if (state >= 4) foundState = 6; else foundState = 8; break;
-				case '.': if (state >= 4) foundState = 6; else foundState = 8; break;
+			case 'Y': if (state >= 4) foundState = 8; else foundState = 0; break;
+			case 'M': if (state >= 4) foundState = 5; else foundState = 1; break;
+			case 'D': if (state >= 4) foundState = 8; else foundState = 2; break;
+			case 'H': if (state >= 4) foundState = 4; else foundState = 8; break;
+			case 'S': if (state >= 7) foundState = 7; else if (state >= 4) foundState = 6; else foundState = 8; break;
+			case '.': if (state >= 4) foundState = 6; else foundState = 8; break;
 			}
 
 			if (foundState == 8 || foundState < state) 
@@ -272,55 +237,13 @@ public class Duration extends CalendarBase
 
 			switch ( foundState )
 			{
-				case 0:
-				{
-					if ( pt == ParseType.DAYTIME )
-						throw new StringParseException("Year not allowed in DayTimeDuration", 2);
-					year = val;	
-				}
-				break;
-				case 1:
-				{
-					if ( pt == ParseType.DAYTIME )
-						throw new StringParseException("Month not allowed in DayTimeDuration", 2);
-					month = val;
-				}
-				break;
-				case 2:
-				{
-					if( pt == ParseType.YEARMONTH )
-						throw new StringParseException("Day not allowed in YearMonthDuration", 2);
-					day = val;
-				}
-				break;
-				case 4:
-				{
-					if( pt == ParseType.YEARMONTH )
-						throw new StringParseException("Hour not allowed in YearMonthDuration", 2);
-					hour = val;
-				}
-				break;
-				case 5:
-				{
-					if( pt == ParseType.YEARMONTH )
-						throw new StringParseException("Minute not allowed in YearMonthDuration", 2);
-					minute = val;
-				}
-				break;
-				case 6:
-				{
-					if( pt == ParseType.YEARMONTH )
-						throw new StringParseException("Second not allowed in YearMonthDuration", 2);
-					second = val;
-				}
-				break;
-				case 7:
-				{
-					if( pt == ParseType.YEARMONTH )
-						throw new StringParseException("Millisecond not allowed in YearMonthDuration", 2);
-					partsecond = val * Math.pow(0.1, digits);
-				}
-				break;
+			case 0: year = val; break;
+			case 1: month = val; break;
+			case 2: day = val; break;
+			case 4: hour = val; break;
+			case 5: minute = val; break;
+			case 6: second = val; break;
+			case 7: partsecond = val * Math.pow(0.1, digits); break;
 			}
 
 			state = foundState + 1;
@@ -328,7 +251,7 @@ public class Duration extends CalendarBase
 		if (state == 0) 
 			throw new StringParseException("No components given after P in duration value.", 2);
 
-	}
+	  }
 
   
 	public long getDayTimeValue() 
@@ -375,20 +298,4 @@ public class Duration extends CalendarBase
 		second =  (int)(l / 1000l); l %=     1000l;
 		partsecond = l / 1000.0;
 	}	
-
-	// automatically adjusts ranges for year and month and the negative flag
-	public static Duration getFromYearMonth( int newyear, int newmonth )
-	{
-		Duration dur = new Duration( newyear, newmonth, 0, 0, 0, 0, 0.0, false );
-		dur.setYearMonthValue( dur.getYearMonthValue() );
-		return dur;
-	}
-
-	// automatically adjusts ranges for the values and the negative flag
-	public static Duration getFromDayTime( int newday, int newhour, int newminute, int newsecond, double newpartsecond )
-	{
-		Duration dur = new Duration( 0, 0, newday, newhour, newminute, newsecond, newpartsecond, false );
-		dur.setDayTimeValue( dur.getDayTimeValue() );
-		return dur;
-	}
 }

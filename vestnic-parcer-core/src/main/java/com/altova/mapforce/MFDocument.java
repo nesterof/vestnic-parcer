@@ -40,11 +40,6 @@ public class MFDocument implements IMFNode
 		return "";
 	}
 
-    public String getNodeName()
-    {
-        return "";
-    }
-
 	public int getNodeKind() 
 	{
 		return MFNodeKind_Document;

@@ -15,22 +15,6 @@ import java.util.regex.Matcher;
 
 public class XLSXFileReader
 {
-	private static String[] sheetTypeURIs = {
-		"http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
-		"http://purl.oclc.org/ooxml/officeDocument/relationships/worksheet" };
-
-	private static String[] officeDocumentTypeURIs = {
-		"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
-		"http://purl.oclc.org/ooxml/officeDocument/relationships/officeDocument" };
-
-	private static String[] sharedStringsTypeURIs = {
-		"http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings", 
-		"http://purl.oclc.org/ooxml/officeDocument/relationships/sharedStrings" };
-
-	private static String[] namespaces = {
-		"http://schemas.openxmlformats.org/officeDocument/2006/relationships",
-		"http://purl.oclc.org/ooxml/officeDocument/relationships" };
-
 	private Document relsBaseDoc = null;
 	private Document workBookDoc = null;
 	private String workBookFileName = null;
@@ -52,15 +36,6 @@ public class XLSXFileReader
 	
 	private final static int InternalFormatNumber_String = 0;
 	private final static int InternalFormatNumber_Number = 1;
-
-	private final static int XLSXVersion_Xlsx2007 = 0;
-	private final static int XLSXVersion_StrictOpenXML = 1;
-	private int xlsxVersion = XLSXVersion_Xlsx2007;
-
-	private int GetArraysIndex()
-	{
-		return xlsxVersion;
-	}
 	
 	public XLSXFileReader(com.altova.io.Input xlsxInput) throws Exception
 	{
@@ -103,15 +78,7 @@ public class XLSXFileReader
 	
 	private Document openWorkBook() throws Exception
 	{
-		workBookFileName = findRelationTargetForKey(relsBaseDoc, "Type", officeDocumentTypeURIs[0]);
-		if (workBookFileName == null)
-		{
-			workBookFileName = findRelationTargetForKey(relsBaseDoc, "Type", officeDocumentTypeURIs[1]);
-			xlsxVersion = XLSXVersion_StrictOpenXML;
-		}
-		else
-			xlsxVersion = XLSXVersion_Xlsx2007;
-		
+		workBookFileName = findRelationTargetForKey(relsBaseDoc, "Type", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument");
 		return loadDocumentFromZip(xlsxZip, workBookFileName);
 	}
 	
@@ -124,7 +91,7 @@ public class XLSXFileReader
 	
 	private java.util.List<String> makeSharedStrings() throws Exception
 	{
-		String stringTableFileName = findRelationTargetForKey(workBookRels, "Type", sharedStringsTypeURIs[GetArraysIndex()]);
+		String stringTableFileName = findRelationTargetForKey(workBookRels, "Type", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings");
 		if (stringTableFileName == null)
 			return null;
 		
@@ -136,11 +103,8 @@ public class XLSXFileReader
 		if (!sst.getLocalName().equals("sst"))
 			throw new Exception ("makeSharedStrings: document element is not sst!");
 		
-		int count = 0;
-		String stringCount = sst.getAttribute("count");
-		if (!stringCount.isEmpty())
-			count = Integer.parseInt(stringCount);
-					
+		int count = Integer.parseInt(sst.getAttribute("count"));
+		
 		sharedStrings = new ArrayList<String>(count);
 		
 		for (Node si = XmlTreeOperations.getFirstElementChild(sst); si != null; si = XmlTreeOperations.getNextElementSibling(si))
@@ -158,13 +122,13 @@ public class XLSXFileReader
 		
 		for (Element sheet = XmlTreeOperations.getFirstElementChild(sheets); sheet != null; sheet = XmlTreeOperations.getNextElementSibling(sheet))
 		{
-			String sheetRelId = sheet.getAttributeNS(namespaces[GetArraysIndex()], "id");
+			String sheetRelId = sheet.getAttributeNS("http://schemas.openxmlformats.org/officeDocument/2006/relationships", "id");
 			String sheetName = sheet.getAttribute("name");
 			
 			workSheetNames.add(sheetName);
 			
 			String typeURI = findRelationInfoForKey(workBookRels, "Id", sheetRelId, "Type");
-			if (typeURI == null || !typeURI.equals(sheetTypeURIs[GetArraysIndex()]))
+			if (typeURI == null || !typeURI.equals("http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet"))
 				continue;
 			
 			String sheetFileName = findRelationTargetForKey(workBookRels, "Id", sheetRelId);
@@ -308,7 +272,7 @@ public class XLSXFileReader
 						resultCol.setAttribute("t", "s");
 						int stringIndex = Integer.parseInt(textValue);
 						if (stringIndex < sharedStrings.size())
-							resultCol.appendChild(resultDoc.createTextNode(sharedStrings.get(stringIndex)));
+							resultCol.appendChild(resultDoc.createTextNode((String) sharedStrings.get(stringIndex)));
 					}
 					else
 					{
@@ -345,13 +309,7 @@ public class XLSXFileReader
 		int index = 0;
 		
 		for (int i=0; i < colName.length(); i++)
-		{
-			int col = (int) colName.charAt(i);
-			if ( col < (int)'A' || col > (int)'Z')
-				return 0;
-
-			index = (index * 26) + col - ((int) 'A' - 1);
-		}
+			index = (index * 26) + (int) colName.charAt(i) - ((int) 'A' - 1);
 		
 		return index;
 	}
@@ -360,9 +318,6 @@ public class XLSXFileReader
 	{
 		//char p;
 		StringBuffer str = new StringBuffer();
-
-		if (index == 0)
-			return str.toString();
 		
 		do
 		{

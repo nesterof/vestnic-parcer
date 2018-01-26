@@ -138,7 +138,7 @@ public class SimpleType
 					a.add(facets[i].stringValue);
 		
 		if (a.size() > 0)
-			return a.toArray(new String[a.size()]);
+			return (String[]) a.toArray(new String[a.size()]);
 		
 		return null;
 	}

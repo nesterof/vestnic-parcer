@@ -86,7 +86,7 @@ public class ComplexType
 			if ((members[i].getFlags() & MemberInfo.IS_ATTRIBUTE) == MemberInfo.IS_ATTRIBUTE && members[i].getLocalName().length() != 0)
 				result.add(new Attribute(members[i]));
 			
-		return result.toArray(new Attribute[result.size()]);
+		return (Attribute[]) result.toArray(new Attribute[result.size()]);
 	}
 	
 	public Attribute findAttribute(String localName, String namespaceURI)
@@ -107,7 +107,7 @@ public class ComplexType
 			if ((members[i].getFlags() & MemberInfo.IS_ATTRIBUTE) == 0 && members[i].getLocalName().length() != 0)
 				result.add(new Element(members[i]));
 			
-		return result.toArray(new Element[result.size()]);
+		return (Element[]) result.toArray(new Element[result.size()]);
 	}
 	
 	public Element findElement(String localName, String namespaceURI)

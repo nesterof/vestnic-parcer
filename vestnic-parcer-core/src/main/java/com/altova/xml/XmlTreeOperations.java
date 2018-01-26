@@ -134,21 +134,21 @@ public class XmlTreeOperations
         return loadDocument(new org.xml.sax.InputSource(new java.io.StringReader(xmlString)));
     }
     
-    public static void saveDocument( Document doc, String filename, boolean prettyPrint, boolean omitXmlDecl ) throws Exception
+    public static void saveDocument( Document doc, String filename, boolean prettyPrint ) throws Exception
     {
-        saveDocument( doc, filename, "UTF-8", false, false, prettyPrint, omitXmlDecl );
+        saveDocument( doc, filename, "UTF-8", false, false, prettyPrint );
     }
     
-    public static void saveDocument( Document doc, com.altova.io.Output output, String encoding, boolean bBigEndian, boolean bBOM, boolean prettyPrint, boolean omitXmlDecl ) throws Exception
+    public static void saveDocument( Document doc, com.altova.io.Output output, String encoding, boolean bBigEndian, boolean bBOM, boolean prettyPrint ) throws Exception
     {
         switch (output.getType())
         {
         case com.altova.io.Output.IO_STREAM:
-            saveDocument(doc, output.getStream(), encoding, bBigEndian, bBOM, prettyPrint, omitXmlDecl);
+            saveDocument(doc, output.getStream(), encoding, bBigEndian, bBOM, prettyPrint);
             break;
             
         case com.altova.io.Output.IO_WRITER:
-            saveXml(doc, prettyPrint, omitXmlDecl, output.getWriter());
+            saveXml(doc, prettyPrint, output.getWriter());
             break;
             
         case com.altova.io.Output.IO_DOM:
@@ -159,14 +159,14 @@ public class XmlTreeOperations
         }
     }
     
-    public static void saveDocument( Document doc, java.io.OutputStream targetStream, String encoding, boolean bBigEndian, boolean bBOM, boolean prettyPrint, boolean omitXmlDecl ) throws Exception
+    public static void saveDocument( Document doc, java.io.OutputStream targetStream, String encoding, boolean bBigEndian, boolean bBOM, boolean prettyPrint ) throws Exception
     {
         if(prettyPrint)
             indentNode(doc.getDocumentElement(), 0);
     
         try {
             java.io.ByteArrayOutputStream result = new java.io.ByteArrayOutputStream();
-            internalSave(new javax.xml.transform.stream.StreamResult(result), doc, encoding, prettyPrint, omitXmlDecl);
+            internalSave(new javax.xml.transform.stream.StreamResult(result), doc, encoding, prettyPrint);
 
             correctByteOrderAndBOM( targetStream, result.toByteArray(), encoding, bBigEndian, bBOM );
         }
@@ -176,10 +176,10 @@ public class XmlTreeOperations
         }
     }
     
-    public static void saveDocument( Document doc, String filename, String encoding, boolean bBigEndian, boolean bBOM, boolean prettyPrint, boolean omitXmlDecl ) throws Exception
+    public static void saveDocument( Document doc, String filename, String encoding, boolean bBigEndian, boolean bBOM, boolean prettyPrint ) throws Exception
     {
         java.io.FileOutputStream outStream = new java.io.FileOutputStream( filename, false );
-        saveDocument(doc, outStream, encoding, bBigEndian, bBOM, prettyPrint, omitXmlDecl);
+        saveDocument(doc, outStream, encoding, bBigEndian, bBOM, prettyPrint);
         outStream.close();
     }
     
@@ -191,7 +191,7 @@ public class XmlTreeOperations
         try
         {
             java.io.ByteArrayOutputStream result = new java.io.ByteArrayOutputStream();
-            internalSave(new javax.xml.transform.stream.StreamResult(result), doc, encoding, prettyPrint, false);
+            internalSave(new javax.xml.transform.stream.StreamResult(result), doc, encoding, prettyPrint);
 
             byte[] transformedData = result.toByteArray();
             result.reset();
@@ -205,14 +205,19 @@ public class XmlTreeOperations
         }
     }
     
-    private static void saveXml( Document doc, boolean prettyPrint, boolean omitXmlDecl, java.io.Writer writer ) throws Exception
+    private static void saveXml( Document doc, boolean prettyPrint, java.io.Writer writer ) throws Exception
+    {
+    	saveXml( doc, prettyPrint, writer, false );
+    }
+    
+    private static void saveXml( Document doc, boolean prettyPrint, java.io.Writer writer, boolean omitXmlDec ) throws Exception
     {
         if(prettyPrint)
             indentNode(doc.getDocumentElement(), 0);
 
         try 
         {
-            internalSave(new javax.xml.transform.stream.StreamResult(writer), doc, null, prettyPrint, omitXmlDecl);
+            internalSave(new javax.xml.transform.stream.StreamResult(writer), doc, null, prettyPrint, omitXmlDec);
             writer.flush();
         }
         catch (Exception e)
@@ -221,14 +226,24 @@ public class XmlTreeOperations
         }
     }
     
-    public static String saveXml( Document doc, boolean prettyPrint, boolean omitXmlDecl ) throws Exception
+    public static String saveXml( Document doc, boolean prettyPrint ) throws Exception
+    {
+    	return saveXml( doc, prettyPrint, false );
+    }
+    
+    public static String saveXml( Document doc, boolean prettyPrint, boolean omitXmlDec ) throws Exception
     {
         java.io.StringWriter result = new java.io.StringWriter();
-        saveXml(doc, prettyPrint, omitXmlDecl, result);
+        saveXml(doc, prettyPrint, result, omitXmlDec);
         return result.toString();
     }
 	
-    protected static void internalSave(javax.xml.transform.Result result, Node node, String encoding, boolean bIndent, boolean omitXmlDecl) throws Exception
+	protected static void internalSave(javax.xml.transform.Result result, Node node, String encoding, boolean bIndent) throws Exception
+    {
+    	internalSave( result,  node,  encoding, bIndent, false );
+    }
+	
+    protected static void internalSave(javax.xml.transform.Result result, Node node, String encoding, boolean bIndent, boolean omitXmlDec) throws Exception
     {
         try 
         {
@@ -247,7 +262,7 @@ public class XmlTreeOperations
                     transformer.setOutputProperty(javax.xml.transform.OutputKeys.DOCTYPE_SYSTEM, doc.getDoctype().getSystemId());
             }
             transformer.setOutputProperty("indent", bIndent ? "yes" : "no");
-			if (omitXmlDecl)
+			if (omitXmlDec)
 				transformer.setOutputProperty("omit-xml-declaration", "yes");
             transformer.transform(source, result);
         } 
@@ -382,15 +397,15 @@ public class XmlTreeOperations
         return 0;
     }
 
-    private static void indentNode(org.w3c.dom.Node node, int nIndent) {
+    private static void indentNode(Node node, int nIndent) {
         if (node == null)
             return;
         
-        if (nIndent > 0 && (node.getNodeType() == org.w3c.dom.Node.ELEMENT_NODE || node.getNodeType() == org.w3c.dom.Node.COMMENT_NODE))
+        if (nIndent > 0 && (node.getNodeType() == Node.ELEMENT_NODE || node.getNodeType() == Node.COMMENT_NODE))
         {
             if (node.getPreviousSibling() == null || 
-                (node.getPreviousSibling().getNodeType() != org.w3c.dom.Node.CDATA_SECTION_NODE && 
-                 node.getPreviousSibling().getNodeType() != org.w3c.dom.Node.TEXT_NODE))
+                (node.getPreviousSibling().getNodeType() != Node.CDATA_SECTION_NODE &&
+                 node.getPreviousSibling().getNodeType() != Node.TEXT_NODE))
             {
                 String sIndent = "\n";
                 for (int i=0; i<nIndent; i++) sIndent += "\t";
@@ -403,7 +418,7 @@ public class XmlTreeOperations
             }
         }
     
-        for (org.w3c.dom.Node child = node.getFirstChild(); child != null; child = child.getNextSibling())
+        for (Node child = node.getFirstChild(); child != null; child = child.getNextSibling())
             indentNode(child, nIndent+1);
     }
     
@@ -447,7 +462,7 @@ public class XmlTreeOperations
         
         if (nameNsUri != null && nameNsUri.length() > 0)
         {
-            namePrefix = lookupPrefix(element, nameNsUri);
+            namePrefix = element.lookupPrefix(nameNsUri);
             if (namePrefix == null)
             {
                 if (inlinedNamePrefix.length() > 0)
@@ -463,7 +478,7 @@ public class XmlTreeOperations
         
         if (valueNsUri != null && valueNsUri.length() > 0)
         {	
-            valuePrefix = lookupPrefix(element, valueNsUri);
+            valuePrefix = element.lookupPrefix(valueNsUri);
             if (valuePrefix == null)
             {
                 valuePrefix = "ns" + staticNSCount++;
@@ -477,22 +492,6 @@ public class XmlTreeOperations
         element.setAttributeNS(nameNsUri, namePrefix + name, valuePrefix + value);
     }
 
-	public static String lookupNamespaceURI( Node node, String prefix )
-	{
-		if ( prefix != null && prefix.equals("xml") )
-			return "http://www.w3.org/XML/1998/namespace";
-
-		return node.lookupNamespaceURI( prefix );
-	}
-
-	public static String lookupPrefix( Node node, String uri )
-	{
-		if ( uri != null && uri.equals("http://www.w3.org/XML/1998/namespace") )
-			return "xml";
-
-		return node.lookupPrefix( uri );
-	}
-
     public static String findUnusedPrefix(Node node, String prefixHint)
     {
         String pp = prefixHint;
@@ -500,7 +499,7 @@ public class XmlTreeOperations
             pp = "n";
         else
         {
-            if (lookupNamespaceURI(node, pp) == null)
+            if (node.lookupNamespaceURI(pp) == null)
                 return pp;
         }
         
@@ -508,9 +507,8 @@ public class XmlTreeOperations
         while (true)
         {
             String s = pp + String.valueOf(n);
-            if (lookupNamespaceURI(node, s) == null)
+            if (node.lookupNamespaceURI(s) == null)
                 return s;
-            ++n;
         }
     }
         
@@ -650,12 +648,12 @@ public class XmlTreeOperations
         String value = getTextContent(node);
         int i = value.indexOf(':');
         if (i == -1)
-            return new javax.xml.namespace.QName(lookupNamespaceURI(node, null), value);
+            return new javax.xml.namespace.QName(node.lookupNamespaceURI(null), value);
         
         String prefix = value.substring(0, i);
         String local = value.substring(i+1);
         
-        String uri = lookupNamespaceURI(node, prefix);
+        String uri = node.lookupNamespaceURI(prefix);
         
         return new javax.xml.namespace.QName(uri, local, prefix);
     }

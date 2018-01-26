@@ -184,7 +184,7 @@ public abstract class CalendarBase
   }
 
   public String toTimeString() {
-	  return toTimeString("0.0########");
+	return toTimeString("0.0#####");
   }						   
 
   // decimal_format *must* start with "0.".
@@ -466,23 +466,20 @@ public abstract class CalendarBase
 			{
 				// fraction. do whatever seems fit.
 				RefInt val = new RefInt(0);
-				long frac = 0;
 				int digits = 0;
 				while ( context.readDigitAndAdvance( val, 1, 9) )
 				{
-					frac *= 10;
-					frac += val.value;
-					val.value = 0;
+					val.value *= 10;
 					digits += 1;
-					if ( digits >= 9 ) // precision loss - ignore
+					if ( digits >= 8 ) // precision loss - ignore
 						break;
 				}
 
 				if ( digits == 0 )
 					return false;
 
-				second += frac * Math.pow( 10.0, -digits );
-				
+				second += val.value * Math.pow( 10.0, -digits - 1 );
+
 				// skip any further digits.
 				while ( context.readDigitAndAdvance( val, 0, 9) ) 
 					;		
@@ -532,10 +529,7 @@ public abstract class CalendarBase
 			day.value = c.get(Calendar.DAY_OF_MONTH);
 		}
 
-		java.math.BigDecimal fraction = new java.math.BigDecimal(second - (int)second);
-		fraction = fraction.round(new java.math.MathContext(9));// round to 9 digits
-
-		setInternalValues(year.value, month.value, day.value, hour.value, minute.value, (int)second, fraction.doubleValue(), hasTZ, offsetTZ);
+		setInternalValues(year.value, month.value, day.value, hour.value, minute.value, (int)second, ((second * 1000) % 1000)/1000, hasTZ, offsetTZ);
 		
 		return true;
 	}

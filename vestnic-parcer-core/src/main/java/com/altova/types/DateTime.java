@@ -125,7 +125,7 @@ public class DateTime extends CalendarBase
 	
 	public int getMillisecond() 
 	{
-		return (int)java.lang.Math.round(partsecond*1000.0);
+		return (int) Math.round(partsecond*1000.0);
 	}
 
 	public int hasTimezone() 
@@ -159,14 +159,6 @@ public class DateTime extends CalendarBase
 		cal.set(Calendar.ZONE_OFFSET, offsetTZ * 60000);
 		//cal.setTimeZone( (TimeZone)new SimpleTimeZone(offsetTZ * 60000, "") );
 		return cal;
-	}
-
-	// Returns the weekday, monday is zero (ISO-8601)
-	public int getWeekday()
-	{
-		long millisec = getTimeValue();
-		long days = millisec / (24 * 60 * 60 * 1000);
-		return (int) (days % 7);
 	}
 
   

@@ -62,7 +62,7 @@ public class XLSXFileWriter
 		ListIterator<ResultWorksheet> it = resultWorksheets.listIterator();
 		while (it.hasNext())
 		{
-			ResultWorksheet resultWorksheet = it.next();
+			ResultWorksheet resultWorksheet = (ResultWorksheet) it.next();
 			save(resultWorksheet.document, "xl/" + resultWorksheet.filename);
 		}
 		
@@ -106,7 +106,7 @@ public class XLSXFileWriter
 				ListIterator<ResultWorksheet> itResultWorksheet = resultWorksheets.listIterator();
 				while (itResultWorksheet.hasNext())
 				{
-					ResultWorksheet resultWorksheet2 = itResultWorksheet.next();
+					ResultWorksheet resultWorksheet2 = (ResultWorksheet) itResultWorksheet.next();
 					if (resultWorksheet2.sheetName.equals(sheetName))
 					{
 						resultWorksheet = resultWorksheet2;
@@ -119,50 +119,15 @@ public class XLSXFileWriter
 					resultWorksheet = new ResultWorksheet(sheetName, new ArrayList<java.util.List<Element>>());
 					resultWorksheets.add(resultWorksheet);
 				}
-
-				int rangeStart = 0;
-				int rangeEnd = 0;
-
+				
 				for (Element row=XmlTreeOperations.getFirstElementChild(worksheet); row != null; row = XmlTreeOperations.getNextElementSibling(row))
 				{
 					if (row.getLocalName().equals("RowMarker"))
 					{
-						String attr = row.getAttribute("s");
-						if (attr.length() > 0)
-							rangeStart = Integer.parseInt(attr);
-						else
-							rangeStart = 0;
-
-						int rangeCount = 0;
-						attr = row.getAttribute("cnt");
-						if (attr.length() > 0)
-							rangeCount = Integer.parseInt(attr);
-
-						if (rangeStart > 0)
-						{
-							lastRowSeen = rangeStart - 1;
-							if (rangeCount > 0)
-								rangeEnd = rangeStart + rangeCount - 1;
-							else
-								rangeEnd = 0;
-						}
-						else
-						{
-							int rangeOffset = 0;
-							attr = row.getAttribute("o");
-							if (attr.length() > 0)
-								rangeOffset = Integer.parseInt(attr) - 1;
-
-							if (rangeEnd == 0)
-								lastRowSeen += rangeOffset;
-							else
-								lastRowSeen = rangeEnd + rangeOffset;
-
-							if (rangeCount > 0)
-								rangeEnd = lastRowSeen + rangeCount;
-							else
-								rangeEnd = 0;
-						}
+						String firstRowNumber = row.getAttribute("r");
+						int n = 0;
+						if (firstRowNumber.length() > 0 && ((n = Integer.parseInt(firstRowNumber)) > 0))
+							lastRowSeen = n - 1;
 					}
 					else
 					if (row.getLocalName().equals("Row"))
@@ -176,13 +141,7 @@ public class XLSXFileWriter
 						
 						while (resultWorksheet.matrix.size() <= lastRowSeen)
 							resultWorksheet.matrix.add(null);
-
-                        if (rangeStart > 0 && lastRowSeen < rangeStart)
-                            continue;
-
-                        if (rangeEnd > 0 && lastRowSeen > rangeEnd)
-                            continue;
-
+						
 						java.util.List<Element> lastRow = resultWorksheet.matrix.get(lastRowSeen);
 						if (lastRow == null)
 							lastRow = new ArrayList<Element>();
@@ -230,7 +189,7 @@ public class XLSXFileWriter
 		ResultWorksheet resultWorksheet = null;
 		while(itResultWorksheet.hasNext())
 		{
-			resultWorksheet = itResultWorksheet.next();
+			resultWorksheet = (ResultWorksheet) itResultWorksheet.next();
 			resultWorksheet.filename = ("worksheets/Sheet" + String.valueOf(workSheet++) + ".xml");
 			Document resultSheetDocument = XmlTreeOperations.createDocument();
 			String ns = "http://schemas.openxmlformats.org/spreadsheetml/2006/main";
@@ -249,7 +208,7 @@ public class XLSXFileWriter
 				
 				for(int j = 0; j < cells.size(); j++)
 				{
-					Element cell = cells.get(j);
+					Element cell = (Element) cells.get(j);
 					if (cell == null)
 						continue;
 					
@@ -314,7 +273,7 @@ public class XLSXFileWriter
 		{
 			Element relationship = XmlTreeOperations.appendElement(relationships, ns, "Relationship");
 			relationship.setAttribute("Id", "r" + String.valueOf(n));
-			relationship.setAttribute("Target", itR.next().filename);
+			relationship.setAttribute("Target", ((ResultWorksheet) itR.next()).filename);
 			relationship.setAttribute("Type", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet");
 			n++;
 		}
@@ -337,7 +296,7 @@ public class XLSXFileWriter
 		while (it.hasNext())
 		{
 			Element sheet = XmlTreeOperations.appendElement(sheets, ns, "sheet");
-			sheet.setAttribute("name", it.next().sheetName);
+			sheet.setAttribute("name", ((ResultWorksheet) it.next()).sheetName);
 			sheet.setAttribute("sheetId", String.valueOf(iSheet));
 			sheet.setAttribute("r:id", "r" + String.valueOf(iSheet));
 			iSheet++;
@@ -369,7 +328,7 @@ public class XLSXFileWriter
 		while (it.hasNext())
 		{
 			override = XmlTreeOperations.appendElement(types, ns, "Override");
-			override.setAttribute("PartName", "/xl/" + it.next().filename);
+			override.setAttribute("PartName", "/xl/" + ((ResultWorksheet) it.next()).filename);
 			override.setAttribute("ContentType", "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml");
 		}
 	}
@@ -449,7 +408,7 @@ public class XLSXFileWriter
 	{
 		zipStream.putNextEntry(new ZipEntry(path));
 
-		XmlTreeOperations.saveDocument((Document) p, zipStream, "UTF-8", false, false, false, false);
+		XmlTreeOperations.saveDocument((Document) p, zipStream, "UTF-8", false, false, false);
 
 		zipStream.closeEntry();
 	}
