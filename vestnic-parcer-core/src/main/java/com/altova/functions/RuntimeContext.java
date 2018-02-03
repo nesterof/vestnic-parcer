@@ -36,15 +36,15 @@ public class RuntimeContext
 		return autoNumberStateMap; 
 	}
 	
-	public static void dispose(com.altova.functions.RuntimeContext context) 
+	public static void dispose(RuntimeContext context)
 	{ 
 		if (context.autoNumberStateMap != null) 
 			context.autoNumberStateMap.clear(); 
 	}
 	
-    public static com.altova.functions.RuntimeContext construct() 
+    public static RuntimeContext construct()
 	{ 
-		return new com.altova.functions.RuntimeContext(); 
+		return new RuntimeContext();
 	}
 	
     private RuntimeContext() {}

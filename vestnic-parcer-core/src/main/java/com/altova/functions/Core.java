@@ -887,7 +887,7 @@ public class Core
 	
 		
 	// exists
-	public static boolean exists(com.altova.mapforce.IEnumerable x) throws Exception  
+	public static boolean exists(IEnumerable x) throws Exception
 	{
 		IEnumerator en = x.enumerator(); 
 		boolean b = en.moveNext();
@@ -1331,22 +1331,22 @@ public class Core
 		throw new com.altova.UserException(content);
 	}
 
-	public static com.altova.mapforce.IMFNode createElement(javax.xml.namespace.QName qname, com.altova.mapforce.IEnumerable content)
+	public static com.altova.mapforce.IMFNode createElement(javax.xml.namespace.QName qname, IEnumerable content)
 	{
 		return new com.altova.mapforce.MFElement(qname.getLocalPart(), qname.getNamespaceURI(), null, content);
 	}
 	
-	public static com.altova.mapforce.IMFNode createElementWithPrefix(javax.xml.namespace.QName qname, String prefix, com.altova.mapforce.IEnumerable content)
+	public static com.altova.mapforce.IMFNode createElementWithPrefix(javax.xml.namespace.QName qname, String prefix, IEnumerable content)
 	{
 		return new com.altova.mapforce.MFElement(qname.getLocalPart(), qname.getNamespaceURI(), prefix, content);
 	}
 	
-	public static com.altova.mapforce.IMFNode createAttribute(javax.xml.namespace.QName qname, com.altova.mapforce.IEnumerable content)
+	public static com.altova.mapforce.IMFNode createAttribute(javax.xml.namespace.QName qname, IEnumerable content)
 	{
 		return new com.altova.mapforce.MFAttribute(qname.getLocalPart(), qname.getNamespaceURI(), null, content);
 	}
 	
-	public static com.altova.mapforce.IMFNode createAttributeWithPrefix(javax.xml.namespace.QName qname, String prefix, com.altova.mapforce.IEnumerable content)
+	public static com.altova.mapforce.IMFNode createAttributeWithPrefix(javax.xml.namespace.QName qname, String prefix, IEnumerable content)
 	{
 		return new com.altova.mapforce.MFAttribute(qname.getLocalPart(), qname.getNamespaceURI(), prefix, content);
 	}

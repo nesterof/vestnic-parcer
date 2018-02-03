@@ -1061,7 +1061,7 @@ public class CoreTypes
 	public static String castToString(byte[] b)
 	{
 		if( b == null ) return "";
-		String sResult = com.altova.Base64.encode( b);
+		String sResult = Base64.encode( b);
 		return sResult.replaceAll( "\r", "" );
 	}
 
