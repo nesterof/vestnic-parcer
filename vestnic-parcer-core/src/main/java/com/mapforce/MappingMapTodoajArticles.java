@@ -177,12 +177,12 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 	}
 	static class seq3_create_element_with_prefix implements IEnumerable
 	{
-		IMFNode var3_Name25420429_2017_17_3_unicode;
+		IMFNode var2_Name25420429_2017_17_3_unicode;
 		IMFNode var10_cur_filter_elements;
 	
-		public seq3_create_element_with_prefix(IMFNode var3_Name25420429_2017_17_3_unicode, IMFNode var10_cur_filter_elements)
+		public seq3_create_element_with_prefix(IMFNode var2_Name25420429_2017_17_3_unicode, IMFNode var10_cur_filter_elements)
 		{
-			this.var3_Name25420429_2017_17_3_unicode = var3_Name25420429_2017_17_3_unicode;
+			this.var2_Name25420429_2017_17_3_unicode = var2_Name25420429_2017_17_3_unicode;
 			this.var10_cur_filter_elements = var10_cur_filter_elements;
 		}
 
@@ -205,7 +205,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			IMFNode var8_filter_elements;
 			String var9_cast;
 			IEnumerable var6_vmf1_inputtoresult;
-			javax.xml.namespace.QName var2_create_qname;
+			javax.xml.namespace.QName var3_create_qname;
 			IEnumerable var4_cast;
 			IEnumerator var13_map_filter_elements;
 			javax.xml.namespace.QName var17_create_qname;
@@ -262,12 +262,12 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 				var14_filter_elements = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("artTitles", var1_const_), closure.var10_cur_filter_elements));
 				var11_cast = com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("pages", var1_const_), closure.var10_cur_filter_elements)));
 				var7_create_qname = com.altova.functions.Core.createQName("volume", var1_const_);
-				var5_filter_elements = (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("journal", var1_const_), closure.var3_Name25420429_2017_17_3_unicode));
+				var5_filter_elements = (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("journal", var1_const_), closure.var2_Name25420429_2017_17_3_unicode));
 				var8_filter_elements = (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("issue", var1_const_), var5_filter_elements));
 				var9_cast = com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("number", var1_const_), var8_filter_elements))))))))));
 				var6_vmf1_inputtoresult = new com.altova.functions.Core.SequenceCache(com.mapforce.vmf.vmf1_inputtoresult.create(var9_cast));
-				var2_create_qname = com.altova.functions.Core.createQName("issn", var1_const_);
-				var4_cast = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.box(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(var2_create_qname, var5_filter_elements)))));
+				var3_create_qname = com.altova.functions.Core.createQName("issn", var1_const_);
+				var4_cast = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.box(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(var3_create_qname, var5_filter_elements)))));
 				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("language", var1_const_), var1_const_, com.altova.functions.Core.box("rus"));
 				pos++;
 				return true;
@@ -280,13 +280,13 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			}
 			private boolean moveNext_6() throws Exception {
 				state = 7;				
-				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("journalTitle", var1_const_), var1_const_, com.altova.functions.Core.box("Mir \u00C8konomiki i Upravleni\u00E2"));
+				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("journalTitle", var1_const_), var1_const_, com.altova.functions.Core.box((String)com.altova.functions.Core.first((new seq4_if_greater(closure.var2_Name25420429_2017_17_3_unicode)))));
 				pos++;
 				return true;
 			}
 			private boolean moveNext_7() throws Exception {
 				state = 8;				
-				current = com.altova.functions.Core.createElementWithPrefix(var2_create_qname, var1_const_, var4_cast);
+				current = com.altova.functions.Core.createElementWithPrefix(var3_create_qname, var1_const_, var4_cast);
 				pos++;
 				return true;
 			}
@@ -299,7 +299,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			private boolean moveNext_9() throws Exception {
 				state = 11;				
 				if (!(com.altova.functions.Core.exists(var6_vmf1_inputtoresult))) {state = 11; return false; }
-				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("publicationDate", var1_const_), var1_const_, com.altova.functions.Core.box(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat("20", (String)com.altova.functions.Core.first((new seq4_if_equal(closure.var3_Name25420429_2017_17_3_unicode)))), "-"), (String)com.altova.functions.Core.first(var6_vmf1_inputtoresult))));
+				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("publicationDate", var1_const_), var1_const_, com.altova.functions.Core.box(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat("20", (String)com.altova.functions.Core.first((new seq5_if_equal(closure.var2_Name25420429_2017_17_3_unicode)))), "-"), (String)com.altova.functions.Core.first(var6_vmf1_inputtoresult))));
 				pos++;
 				return true;
 			}
@@ -324,7 +324,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			private boolean moveNext_19() throws Exception {
 				state = 21;				
 				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("codes", var1_const_), closure.var10_cur_filter_elements)))) {state = 21; return false; }
-				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("doi", var1_const_), var1_const_, com.altova.functions.Core.box((String)com.altova.functions.Core.first((new seq5_cond_concat(closure.var10_cur_filter_elements, closure.var3_Name25420429_2017_17_3_unicode)))));
+				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("doi", var1_const_), var1_const_, com.altova.functions.Core.box((String)com.altova.functions.Core.first((new seq6_cond_concat(closure.var10_cur_filter_elements, closure.var2_Name25420429_2017_17_3_unicode)))));
 				pos++;
 				return true;
 			}
@@ -335,7 +335,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			}
 			private boolean moveNext_28() throws Exception {
 				state = 44;				
-				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("authors", var1_const_), var1_const_, (new seq7_cond_map_filter_elements(closure.var10_cur_filter_elements)));
+				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("authors", var1_const_), var1_const_, (new seq9_cond_map_filter_elements(closure.var10_cur_filter_elements)));
 				pos++;
 				return true;
 			}
@@ -348,7 +348,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 				state = 31;				
 				if (!var13_map_filter_elements.moveNext()) {state = 32; return false; }
 				if (!(com.altova.functions.Core.equal("ENG", com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("lang", var1_const_), ((IMFNode)(var13_map_filter_elements.current())))))))) {state = 31; return false; }
-				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("title", var1_const_), var1_const_, (new seq6_create_element_with_prefix(((IMFNode)(var13_map_filter_elements.current())))));
+				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("title", var1_const_), var1_const_, (new seq8_create_element_with_prefix(((IMFNode)(var13_map_filter_elements.current())))));
 				pos++;
 				return true;
 			}
@@ -359,7 +359,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			}
 			private boolean moveNext_44() throws Exception {
 				state = 45;				
-				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("affiliationsList", var1_const_), var1_const_, (new seq13_cond_map_filter_elements(closure.var10_cur_filter_elements)));
+				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("affiliationsList", var1_const_), var1_const_, (new seq15_cond_map_filter_elements(closure.var10_cur_filter_elements)));
 				pos++;
 				return true;
 			}
@@ -379,7 +379,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 				state = 50;				
 				if (!var15_map_filter_elements.moveNext()) {state = 51; return false; }
 				if (!(com.altova.functions.Core.equal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("lang", var1_const_), ((IMFNode)(var15_map_filter_elements.current()))))), "ENG"))) {state = 50; return false; }
-				current = com.altova.functions.Core.createElementWithPrefix(var17_create_qname, var1_const_, (new seq15_create_element_with_prefix(((IMFNode)(var15_map_filter_elements.current())))));
+				current = com.altova.functions.Core.createElementWithPrefix(var17_create_qname, var1_const_, (new seq17_create_element_with_prefix(((IMFNode)(var15_map_filter_elements.current())))));
 				pos++;
 				return true;
 			}
@@ -390,7 +390,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			}
 			private boolean moveNext_64() throws Exception {
 				state = 0;				
-				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("keywords", var1_const_), var1_const_, (new seq16_cond_map_filter_elements(closure.var10_cur_filter_elements)));
+				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("keywords", var1_const_), var1_const_, (new seq18_cond_map_filter_elements(closure.var10_cur_filter_elements)));
 				pos++;
 				return true;
 			}
@@ -417,11 +417,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq4_if_equal implements IEnumerable
+	static class seq4_if_greater implements IEnumerable
 	{
 		IMFNode var2_Name25420429_2017_17_3_unicode;
 	
-		public seq4_if_equal(IMFNode var2_Name25420429_2017_17_3_unicode)
+		public seq4_if_greater(IMFNode var2_Name25420429_2017_17_3_unicode)
 		{
 			this.var2_Name25420429_2017_17_3_unicode = var2_Name25420429_2017_17_3_unicode;
 		}
@@ -433,12 +433,80 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq4_if_equal closure;
+			seq4_if_greater closure;
+			String var1_const_;
+			public Enumerator(seq4_if_greater closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 11:	if (moveNext_11()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 0;				
+				var1_const_ = "";
+				if (!(com.altova.functions.Core.greater(com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("dateUni", var1_const_), (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("issue", var1_const_), (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("journal", var1_const_), closure.var2_Name25420429_2017_17_3_unicode)))))))))))))), "2015"))) {state = 11; return false; }
+				current = "Mir \u00C8konomiki i Upravleni\u00E2";
+				pos++;
+				return true;
+			}
+			private boolean moveNext_11() throws Exception {
+				state = 0;				
+				current = "Vestnik Novosibirskogo Gosudarstvennogo Universiteta. Seri\u00E2: Social\u02B9no-\u00C8konomi\u010Deskie Nauki";
+				pos++;
+				return true;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq5_if_equal implements IEnumerable
+	{
+		IMFNode var2_Name25420429_2017_17_3_unicode;
+	
+		public seq5_if_equal(IMFNode var2_Name25420429_2017_17_3_unicode)
+		{
+			this.var2_Name25420429_2017_17_3_unicode = var2_Name25420429_2017_17_3_unicode;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq5_if_equal closure;
 			String var1_const_;
 			IMFNode var5_filter_elements;
 			javax.xml.namespace.QName var4_create_qname;
 			String var3_;
-			public Enumerator(seq4_if_equal closure) 
+			public Enumerator(seq5_if_equal closure) 
 			{
 				this.closure = closure;
 			}
@@ -491,15 +559,15 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq5_cond_concat implements IEnumerable
+	static class seq6_cond_concat implements IEnumerable
 	{
 		IMFNode var1_cur_filter_elements;
-		IMFNode var3_Name25420429_2017_17_3_unicode;
+		IMFNode var2_Name25420429_2017_17_3_unicode;
 	
-		public seq5_cond_concat(IMFNode var1_cur_filter_elements, IMFNode var3_Name25420429_2017_17_3_unicode)
+		public seq6_cond_concat(IMFNode var1_cur_filter_elements, IMFNode var2_Name25420429_2017_17_3_unicode)
 		{
 			this.var1_cur_filter_elements = var1_cur_filter_elements;
-			this.var3_Name25420429_2017_17_3_unicode = var3_Name25420429_2017_17_3_unicode;
+			this.var2_Name25420429_2017_17_3_unicode = var2_Name25420429_2017_17_3_unicode;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -509,11 +577,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq5_cond_concat closure;
-			String var2_const_;
+			seq6_cond_concat closure;
+			String var3_const_;
 			String var5_const__;
 			IMFNode var4_filter_elements;
-			public Enumerator(seq5_cond_concat closure) 
+			public Enumerator(seq6_cond_concat closure) 
 			{
 				this.closure = closure;
 			}
@@ -536,11 +604,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 0;				
-				var2_const_ = "";
-				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("codes", var2_const_), closure.var1_cur_filter_elements)))) {state = 0; return false; }
+				var3_const_ = "";
+				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("codes", var3_const_), closure.var1_cur_filter_elements)))) {state = 0; return false; }
 				var5_const__ = "-";
-				var4_filter_elements = (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("issue", var2_const_), (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("journal", var2_const_), closure.var3_Name25420429_2017_17_3_unicode))));
-				current = com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat("10.25205/2542-0429-", com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("dateUni", var2_const_), var4_filter_elements))))))))))), var5_const__), com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("volume", var2_const_), var4_filter_elements))))))))))), var5_const__), com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("number", var2_const_), var4_filter_elements))))))))))), var5_const__), com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("pages", var2_const_), closure.var1_cur_filter_elements))));
+				var4_filter_elements = (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("issue", var3_const_), (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("journal", var3_const_), closure.var2_Name25420429_2017_17_3_unicode))));
+				current = com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat((String)com.altova.functions.Core.first((new seq7_if_greater(closure.var2_Name25420429_2017_17_3_unicode))), com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("dateUni", var3_const_), var4_filter_elements))))))))))), var5_const__), com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("volume", var3_const_), var4_filter_elements))))))))))), var5_const__), com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("number", var3_const_), var4_filter_elements))))))))))), var5_const__), com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("pages", var3_const_), closure.var1_cur_filter_elements))));
 				pos++;
 				return true;
 			}
@@ -558,11 +626,79 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq6_create_element_with_prefix implements IEnumerable
+	static class seq7_if_greater implements IEnumerable
+	{
+		IMFNode var2_Name25420429_2017_17_3_unicode;
+	
+		public seq7_if_greater(IMFNode var2_Name25420429_2017_17_3_unicode)
+		{
+			this.var2_Name25420429_2017_17_3_unicode = var2_Name25420429_2017_17_3_unicode;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq7_if_greater closure;
+			String var1_const_;
+			public Enumerator(seq7_if_greater closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 11:	if (moveNext_11()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 0;				
+				var1_const_ = "";
+				if (!(com.altova.functions.Core.greater(com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("dateUni", var1_const_), (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("issue", var1_const_), (IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("journal", var1_const_), closure.var2_Name25420429_2017_17_3_unicode)))))))))))))), "2015"))) {state = 11; return false; }
+				current = "10.25205/2542-0429-";
+				pos++;
+				return true;
+			}
+			private boolean moveNext_11() throws Exception {
+				state = 0;				
+				current = "10.25205/1818-7862";
+				pos++;
+				return true;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq8_create_element_with_prefix implements IEnumerable
 	{
 		IMFNode var2_cur_filter_elements;
 	
-		public seq6_create_element_with_prefix(IMFNode var2_cur_filter_elements)
+		public seq8_create_element_with_prefix(IMFNode var2_cur_filter_elements)
 		{
 			this.var2_cur_filter_elements = var2_cur_filter_elements;
 		}
@@ -574,9 +710,9 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq6_create_element_with_prefix closure;
+			seq8_create_element_with_prefix closure;
 			String var1_const_;
-			public Enumerator(seq6_create_element_with_prefix closure) 
+			public Enumerator(seq8_create_element_with_prefix closure) 
 			{
 				this.closure = closure;
 			}
@@ -625,11 +761,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq7_cond_map_filter_elements implements IEnumerable
+	static class seq9_cond_map_filter_elements implements IEnumerable
 	{
 		IMFNode var1_cur_filter_elements;
 	
-		public seq7_cond_map_filter_elements(IMFNode var1_cur_filter_elements)
+		public seq9_cond_map_filter_elements(IMFNode var1_cur_filter_elements)
 		{
 			this.var1_cur_filter_elements = var1_cur_filter_elements;
 		}
@@ -641,12 +777,12 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq7_cond_map_filter_elements closure;
+			seq9_cond_map_filter_elements closure;
 			String var3_const_;
 			IEnumerable var4_filter_elements;
 			javax.xml.namespace.QName var5_create_qname;
 			IEnumerator var2_map_filter_elements;
-			public Enumerator(seq7_cond_map_filter_elements closure) 
+			public Enumerator(seq9_cond_map_filter_elements closure) 
 			{
 				this.closure = closure;
 			}
@@ -681,8 +817,8 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			private boolean moveNext_9() throws Exception {
 				state = 9;				
 				if (!var2_map_filter_elements.moveNext()) {state = 10; return false; }
-				if (!(com.altova.functions.Core.exists((new seq8_map_map_filter_elements(((IMFNode)(var2_map_filter_elements.current()))))))) {state = 9; return false; }
-				current = com.altova.functions.Core.createElementWithPrefix(var5_create_qname, var3_const_, (new seq10_create_element_with_prefix(((IMFNode)(var2_map_filter_elements.current())))));
+				if (!(com.altova.functions.Core.exists((new seq10_map_map_filter_elements(((IMFNode)(var2_map_filter_elements.current()))))))) {state = 9; return false; }
+				current = com.altova.functions.Core.createElementWithPrefix(var5_create_qname, var3_const_, (new seq12_create_element_with_prefix(((IMFNode)(var2_map_filter_elements.current())))));
 				pos++;
 				return true;
 			}
@@ -706,11 +842,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq8_map_map_filter_elements implements IEnumerable
+	static class seq10_map_map_filter_elements implements IEnumerable
 	{
 		IMFNode var2_cur_filter_elements;
 	
-		public seq8_map_map_filter_elements(IMFNode var2_cur_filter_elements)
+		public seq10_map_map_filter_elements(IMFNode var2_cur_filter_elements)
 		{
 			this.var2_cur_filter_elements = var2_cur_filter_elements;
 		}
@@ -722,9 +858,9 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq8_map_map_filter_elements closure;
+			seq10_map_map_filter_elements closure;
 			IEnumerator var1_map_map_filter_elements;
-			public Enumerator(seq8_map_map_filter_elements closure) 
+			public Enumerator(seq10_map_map_filter_elements closure) 
 			{
 				this.closure = closure;
 			}
@@ -749,7 +885,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 5;				
-				var1_map_map_filter_elements = ((new seq9_map_filter_elements(closure.var2_cur_filter_elements))).enumerator();
+				var1_map_map_filter_elements = ((new seq11_map_filter_elements(closure.var2_cur_filter_elements))).enumerator();
 				return false;
 			}
 			private boolean moveNext_5() throws Exception {
@@ -780,11 +916,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq9_map_filter_elements implements IEnumerable
+	static class seq11_map_filter_elements implements IEnumerable
 	{
 		IMFNode var2_cur_filter_elements;
 	
-		public seq9_map_filter_elements(IMFNode var2_cur_filter_elements)
+		public seq11_map_filter_elements(IMFNode var2_cur_filter_elements)
 		{
 			this.var2_cur_filter_elements = var2_cur_filter_elements;
 		}
@@ -796,10 +932,10 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq9_map_filter_elements closure;
+			seq11_map_filter_elements closure;
 			String var3_const_;
 			IEnumerator var1_map_filter_elements;
-			public Enumerator(seq9_map_filter_elements closure) 
+			public Enumerator(seq11_map_filter_elements closure) 
 			{
 				this.closure = closure;
 			}
@@ -855,11 +991,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq10_create_element_with_prefix implements IEnumerable
+	static class seq12_create_element_with_prefix implements IEnumerable
 	{
 		IMFNode var2_cur_filter_elements;
 	
-		public seq10_create_element_with_prefix(IMFNode var2_cur_filter_elements)
+		public seq12_create_element_with_prefix(IMFNode var2_cur_filter_elements)
 		{
 			this.var2_cur_filter_elements = var2_cur_filter_elements;
 		}
@@ -871,12 +1007,12 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq10_create_element_with_prefix closure;
+			seq12_create_element_with_prefix closure;
 			String var3_const_;
 			IEnumerable var5_filter_elements;
 			IEnumerator var1_map_filter_elements;
 			IEnumerator var4_map_filter_elements;
-			public Enumerator(seq10_create_element_with_prefix closure) 
+			public Enumerator(seq12_create_element_with_prefix closure) 
 			{
 				this.closure = closure;
 			}
@@ -925,8 +1061,8 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			private boolean moveNext_16() throws Exception {
 				state = 16;				
 				if (!var4_map_filter_elements.moveNext()) {state = 17; return false; }
-				if (!((Boolean)com.altova.functions.Core.first((new seq11_if_equal(((IMFNode)(var4_map_filter_elements.current()))))))) {state = 16; return false; }
-				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("email", var3_const_), var3_const_, com.altova.functions.Core.box((String)com.altova.functions.Core.first((new seq12_cond_map_filter_elements(((IMFNode)(var4_map_filter_elements.current())))))));
+				if (!((Boolean)com.altova.functions.Core.first((new seq13_if_equal(((IMFNode)(var4_map_filter_elements.current()))))))) {state = 16; return false; }
+				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("email", var3_const_), var3_const_, com.altova.functions.Core.box((String)com.altova.functions.Core.first((new seq14_cond_map_filter_elements(((IMFNode)(var4_map_filter_elements.current())))))));
 				pos++;
 				return true;
 			}
@@ -953,11 +1089,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq11_if_equal implements IEnumerable
+	static class seq13_if_equal implements IEnumerable
 	{
 		IMFNode var1_cur_filter_elements;
 	
-		public seq11_if_equal(IMFNode var1_cur_filter_elements)
+		public seq13_if_equal(IMFNode var1_cur_filter_elements)
 		{
 			this.var1_cur_filter_elements = var1_cur_filter_elements;
 		}
@@ -969,9 +1105,9 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq11_if_equal closure;
+			seq13_if_equal closure;
 			String var2_const_;
-			public Enumerator(seq11_if_equal closure) 
+			public Enumerator(seq13_if_equal closure) 
 			{
 				this.closure = closure;
 			}
@@ -1021,11 +1157,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq12_cond_map_filter_elements implements IEnumerable
+	static class seq14_cond_map_filter_elements implements IEnumerable
 	{
 		IMFNode var1_cur_filter_elements;
 	
-		public seq12_cond_map_filter_elements(IMFNode var1_cur_filter_elements)
+		public seq14_cond_map_filter_elements(IMFNode var1_cur_filter_elements)
 		{
 			this.var1_cur_filter_elements = var1_cur_filter_elements;
 		}
@@ -1037,10 +1173,10 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq12_cond_map_filter_elements closure;
+			seq14_cond_map_filter_elements closure;
 			String var3_const_;
 			IEnumerator var2_map_filter_elements;
-			public Enumerator(seq12_cond_map_filter_elements closure) 
+			public Enumerator(seq14_cond_map_filter_elements closure) 
 			{
 				this.closure = closure;
 			}
@@ -1097,11 +1233,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq13_cond_map_filter_elements implements IEnumerable
+	static class seq15_cond_map_filter_elements implements IEnumerable
 	{
 		IMFNode var1_cur_filter_elements;
 	
-		public seq13_cond_map_filter_elements(IMFNode var1_cur_filter_elements)
+		public seq15_cond_map_filter_elements(IMFNode var1_cur_filter_elements)
 		{
 			this.var1_cur_filter_elements = var1_cur_filter_elements;
 		}
@@ -1113,12 +1249,12 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq13_cond_map_filter_elements closure;
+			seq15_cond_map_filter_elements closure;
 			String var3_const_;
 			IEnumerable var4_filter_elements;
 			IEnumerator var2_map_filter_elements;
 			IEnumerator var5_map_filter_elements;
-			public Enumerator(seq13_cond_map_filter_elements closure) 
+			public Enumerator(seq15_cond_map_filter_elements closure) 
 			{
 				this.closure = closure;
 			}
@@ -1165,7 +1301,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			private boolean moveNext_13() throws Exception {
 				state = 13;				
 				if (!var5_map_filter_elements.moveNext()) {state = 14; return false; }
-				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("affiliationName", var3_const_), var3_const_, (new seq14_create_element_with_prefix(((IMFNode)(var2_map_filter_elements.current())), ((IMFNode)(var5_map_filter_elements.current())))));
+				current = com.altova.functions.Core.createElementWithPrefix(com.altova.functions.Core.createQName("affiliationName", var3_const_), var3_const_, (new seq16_create_element_with_prefix(((IMFNode)(var2_map_filter_elements.current())), ((IMFNode)(var5_map_filter_elements.current())))));
 				pos++;
 				return true;
 			}
@@ -1190,12 +1326,12 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq14_create_element_with_prefix implements IEnumerable
+	static class seq16_create_element_with_prefix implements IEnumerable
 	{
 		IMFNode var2_cur_filter_elements;
 		IMFNode var3_cur_filter_elements;
 	
-		public seq14_create_element_with_prefix(IMFNode var2_cur_filter_elements, IMFNode var3_cur_filter_elements)
+		public seq16_create_element_with_prefix(IMFNode var2_cur_filter_elements, IMFNode var3_cur_filter_elements)
 		{
 			this.var2_cur_filter_elements = var2_cur_filter_elements;
 			this.var3_cur_filter_elements = var3_cur_filter_elements;
@@ -1208,9 +1344,9 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq14_create_element_with_prefix closure;
+			seq16_create_element_with_prefix closure;
 			String var1_const_;
-			public Enumerator(seq14_create_element_with_prefix closure) 
+			public Enumerator(seq16_create_element_with_prefix closure) 
 			{
 				this.closure = closure;
 			}
@@ -1259,11 +1395,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq15_create_element_with_prefix implements IEnumerable
+	static class seq17_create_element_with_prefix implements IEnumerable
 	{
 		IMFNode var2_cur_filter_elements;
 	
-		public seq15_create_element_with_prefix(IMFNode var2_cur_filter_elements)
+		public seq17_create_element_with_prefix(IMFNode var2_cur_filter_elements)
 		{
 			this.var2_cur_filter_elements = var2_cur_filter_elements;
 		}
@@ -1275,9 +1411,9 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq15_create_element_with_prefix closure;
+			seq17_create_element_with_prefix closure;
 			String var1_const_;
-			public Enumerator(seq15_create_element_with_prefix closure) 
+			public Enumerator(seq17_create_element_with_prefix closure) 
 			{
 				this.closure = closure;
 			}
@@ -1326,11 +1462,11 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq16_cond_map_filter_elements implements IEnumerable
+	static class seq18_cond_map_filter_elements implements IEnumerable
 	{
 		IMFNode var1_cur_filter_elements;
 	
-		public seq16_cond_map_filter_elements(IMFNode var1_cur_filter_elements)
+		public seq18_cond_map_filter_elements(IMFNode var1_cur_filter_elements)
 		{
 			this.var1_cur_filter_elements = var1_cur_filter_elements;
 		}
@@ -1342,12 +1478,12 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq16_cond_map_filter_elements closure;
+			seq18_cond_map_filter_elements closure;
 			String var3_const_;
 			IEnumerable var4_filter_elements;
 			javax.xml.namespace.QName var5_create_qname;
 			IEnumerator var2_map_filter_elements;
-			public Enumerator(seq16_cond_map_filter_elements closure) 
+			public Enumerator(seq18_cond_map_filter_elements closure) 
 			{
 				this.closure = closure;
 			}
