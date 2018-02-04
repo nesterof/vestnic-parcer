@@ -1,6 +1,10 @@
 package controller;
 
+import com.altova.TraceProvider;
 import com.mapforce.MappingMapTodoajArticles;
+import com.mapforce.MappingMapToic_import;
+
+import static controller.TransformationType.DOAJ;
 
 public class XLTController {
 
@@ -20,9 +24,6 @@ public class XLTController {
     public void parceXLT(String inputFilePath, String outputFilePath, String xltTemplate) throws Exception {
 
           	try {           		// Mapping
-
-			MappingMapTodoajArticles mappingMapTodoajArticles = new MappingMapTodoajArticles();
-
 
 			// run mapping
 			//
@@ -53,12 +54,20 @@ public class XLTController {
 			// MappingMapTodoajArticlesObject.setCloseObjectsAfterRun(false);
 
 			{
-				com.altova.io.Input Name25420429_2017_17_3_unicode2Source = com.altova.io.StreamInput.createInput(inputFilePath);
-				com.altova.io.Output doajArticles2Target = new com.altova.io.FileOutput(outputFilePath);
+				com.altova.io.Input input = com.altova.io.StreamInput.createInput(inputFilePath);
+				com.altova.io.Output output = new com.altova.io.FileOutput(outputFilePath);
 
-				mappingMapTodoajArticles.run(
-						Name25420429_2017_17_3_unicode2Source,
-						doajArticles2Target);
+				TransformationType transformationType = TransformationType.valueOf(xltTemplate.toUpperCase());
+				switch (transformationType) {
+					case DOAJ:
+						MappingMapTodoajArticles mappingMapTodoajArticles = new MappingMapTodoajArticles();
+						mappingMapTodoajArticles.run(input, output);
+						break;
+					case ICI:
+						MappingMapToic_import mappingMapToic_import = new MappingMapToic_import();
+						mappingMapToic_import.run(input, output);
+						break;
+				}
 			}
 
 			System.out.println("Finished");

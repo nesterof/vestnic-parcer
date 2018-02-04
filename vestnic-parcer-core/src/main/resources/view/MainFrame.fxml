@@ -32,6 +32,7 @@
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="Doaj" />
+                <String fx:value="ICI" />
             </FXCollections>
         </items>
     </ComboBox>
