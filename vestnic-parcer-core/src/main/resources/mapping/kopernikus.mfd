@@ -1,0 +1,2762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="17">
+	<component name="defaultmap1" blackbox="0" uid="54" editable="1">
+		<properties SelectedLanguage="java" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="3" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="735" lty="85" rbx="886" rby="103"/>
+					<data>
+						<constant value="https://www.nsu.ru/rs/mw/link/Image:300px-/66436/%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_%D1%87%D0%B8%D1%81%D1%82%D0%B0%D1%8F.jpg" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="4" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="28"/>
+					</targets>
+					<view ltx="735" lty="105" rbx="889" rby="123"/>
+					<data>
+						<constant value="https://www.nsu.ru/ef/vestnik_ngu_ef/" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="article" library="core" uid="5" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="47"/>
+						<datapoint pos="1" key="20"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="37"/>
+						<datapoint/>
+					</targets>
+					<view ltx="779" lty="128" rbx="882" rby="184"/>
+				</component>
+				<component name="constant" library="core" uid="7" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="624" lty="204" rbx="686" rby="222"/>
+					<data>
+						<constant value="RAR" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="selectRus" library="user" blackbox="0" uid="31" kind="19" visible="0">
+					<view ltx="457" lty="270" rbx="571" rby="304"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="66" componentid="19"/>
+							<entry name="value" inpkey="7" componentid="20"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="92" componentid="16"/>
+						</root>
+					</data>
+				</component>
+				<component name="disciplineScince" library="user" blackbox="0" uid="244" kind="19" visible="0">
+					<view ltx="810" lty="753" rbx="885" rby="770"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="167" componentid="242"/>
+						</root>
+					</data>
+				</component>
+				<component name="getEconomiAreaScience" library="user" blackbox="0" uid="240" kind="19" visible="0">
+					<view ltx="759" lty="695" rbx="834" rby="712"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="164" componentid="238"/>
+						</root>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="6" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="44"/>
+						<datapoint pos="1" key="26"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="19"/>
+					</targets>
+					<view ltx="698" lty="167" rbx="751" rby="223"/>
+				</component>
+				<component name="selectENG" library="user" blackbox="0" uid="32" kind="19" visible="0">
+					<view ltx="444" lty="437" rbx="558" rby="471"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="68" componentid="27"/>
+							<entry name="value" inpkey="9" componentid="28"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="95" componentid="24"/>
+						</root>
+					</data>
+				</component>
+				<component name="filterLang" library="user" blackbox="0" uid="53" kind="19" visible="0">
+					<view ltx="753" lty="469" rbx="885" rby="503"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="value" inpkey="58" componentid="54"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="engValue" outkey="70" componentid="46"/>
+							<entry name="rusValue" outkey="73" componentid="50"/>
+						</root>
+					</data>
+				</component>
+				<component name="normolazeDateRecived" library="user" blackbox="0" uid="292" kind="19" visible="0">
+					<view ltx="495" lty="692" rbx="604" rby="709"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="date" inpkey="183" componentid="289"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="184" componentid="287"/>
+						</root>
+					</data>
+				</component>
+				<component name="concatPages" library="user" blackbox="0" uid="42" kind="19" visible="0">
+					<view ltx="653" lty="292" rbx="766" rby="326"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="pages" inpkey="35" componentid="38"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="from" outkey="82" componentid="35"/>
+							<entry name="to" outkey="87" componentid="37"/>
+						</root>
+					</data>
+				</component>
+				<component name="selectENG" library="user" blackbox="0" uid="293" kind="19" visible="0">
+					<view ltx="588" lty="463" rbx="702" rby="497"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="197" componentid="27"/>
+							<entry name="value" inpkey="196" componentid="28"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="198" componentid="24"/>
+						</root>
+					</data>
+				</component>
+				<component name="selectENG" library="user" blackbox="0" uid="295" kind="19" visible="0">
+					<view ltx="691" lty="634" rbx="805" rby="668"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="203" componentid="27"/>
+							<entry name="value" inpkey="202" componentid="28"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="204" componentid="24"/>
+						</root>
+					</data>
+				</component>
+				<component name="getType" library="user" blackbox="0" uid="300" kind="19" visible="0">
+					<view ltx="768" lty="46" rbx="843" rby="63"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="223" componentid="298"/>
+						</root>
+					</data>
+				</component>
+				<component name="getPolishAffiliation" library="user" blackbox="0" uid="304" kind="19" visible="0">
+					<view ltx="816" lty="794" rbx="891" rby="811"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="225" componentid="302"/>
+						</root>
+					</data>
+				</component>
+				<component name="selectENG" library="user" blackbox="0" uid="294" kind="19" visible="0">
+					<view ltx="588" lty="552" rbx="702" rby="586"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="200" componentid="27"/>
+							<entry name="value" inpkey="199" componentid="28"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="201" componentid="24"/>
+						</root>
+					</data>
+				</component>
+				<component name="selectENG" library="user" blackbox="0" uid="296" kind="19" visible="0">
+					<view ltx="414" lty="506" rbx="528" rby="540"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="206" componentid="27"/>
+							<entry name="value" inpkey="205" componentid="28"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" componentid="24"/>
+						</root>
+					</data>
+				</component>
+				<component name="fieldScience" library="user" blackbox="0" uid="248" kind="19" visible="0">
+					<view ltx="887" lty="726" rbx="962" rby="743"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="170" componentid="246"/>
+						</root>
+					</data>
+				</component>
+				<component name="splitName" library="user" blackbox="0" uid="236" kind="19" visible="0">
+					<view ltx="777" lty="603" rbx="922" rby="637"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="inicial" inpkey="157" componentid="228"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="name" outkey="155" componentid="234"/>
+							<entry name="patronymic" outkey="154" componentid="235"/>
+						</root>
+					</data>
+				</component>
+				<component name="selectENG" library="user" blackbox="0" uid="44" kind="19" visible="0">
+					<view ltx="391" lty="644" rbx="505" rby="678"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="61" componentid="27"/>
+							<entry name="value" inpkey="2" componentid="28"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="79" componentid="24"/>
+						</root>
+					</data>
+				</component>
+				<component name="selectENG" library="user" blackbox="0" uid="305" kind="19" visible="0">
+					<view ltx="652" lty="742" rbx="766" rby="776"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="237" componentid="27"/>
+							<entry name="value" inpkey="238" componentid="28"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="239" componentid="24"/>
+						</root>
+					</data>
+				</component>
+				<component name="createArticcelURL" library="user" blackbox="0" uid="221" kind="19" visible="0">
+					<view ltx="673" lty="356" rbx="803" rby="407"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="year" inpkey="111" componentid="210"/>
+							<entry name="number" inpkey="112" componentid="213"/>
+							<entry name="files" inpkey="113" componentid="214"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="114" componentid="209"/>
+						</root>
+					</data>
+				</component>
+				<component name="createVolume" library="user" blackbox="0" uid="317" kind="19" visible="0">
+					<view ltx="434" lty="-46" rbx="564" rby="-12"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="volume" inpkey="249" componentid="227"/>
+							<entry name="number" inpkey="250" componentid="228"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="251" componentid="226"/>
+						</root>
+					</data>
+				</component>
+				<component name="selectRus" library="user" blackbox="0" uid="45" kind="19" visible="0">
+					<view ltx="449" lty="208" rbx="563" rby="242"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="63" componentid="19"/>
+							<entry name="value" inpkey="4" componentid="20"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="76" componentid="16"/>
+						</root>
+					</data>
+				</component>
+				<component name="setEmailWithDefault" library="user" blackbox="0" uid="312" kind="19" visible="0">
+					<view ltx="480" lty="768" rbx="615" rby="819"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="lang" inpkey="243" componentid="308"/>
+							<entry name="email" inpkey="244" componentid="309"/>
+							<entry name="surname" inpkey="255" componentid="319"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="245" componentid="307"/>
+						</root>
+					</data>
+				</component>
+				<component name="toXSDateTime" library="user" blackbox="0" uid="257" kind="19" visible="0">
+					<view ltx="688" lty="-30" rbx="843" rby="-13"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="vestnic_date" inpkey="178" componentid="254"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="179" componentid="252"/>
+						</root>
+					</data>
+				</component>
+				<component name="createDoi" library="user" blackbox="0" uid="207" kind="19" visible="0">
+					<view ltx="512" lty="128" rbx="653" rby="213"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="year" inpkey="104" componentid="193"/>
+							<entry name="volume" inpkey="105" componentid="198"/>
+							<entry name="number" inpkey="106" componentid="194"/>
+							<entry name="pages" inpkey="107" componentid="199"/>
+							<entry name="defaultDOI" inpkey="108" componentid="202"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="109" componentid="192"/>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="66" lty="-4" rbx="267" rby="776"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="journal" expanded="1">
+										<entry name="operCard" expanded="1">
+											<entry name="date" outkey="172"/>
+										</entry>
+										<entry name="issn" outkey="54"/>
+										<entry name="journalInfo" expanded="1"/>
+										<entry name="issue" expanded="1">
+											<entry name="volume" outkey="22"/>
+											<entry name="number" outkey="40"/>
+											<entry name="dateUni" outkey="31"/>
+											<entry name="articles" expanded="1">
+												<entry name="section">
+													<entry name="secTitle" expanded="1"/>
+												</entry>
+												<entry name="article" outkey="46" expanded="1">
+													<entry name="pages" outkey="34"/>
+													<entry name="artType" outkey="43"/>
+													<entry name="authors" expanded="1">
+														<entry name="author" outkey="137" expanded="1">
+															<entry name="num" type="attribute" outkey="230"/>
+															<entry name="individInfo" expanded="1">
+																<entry name="lang" type="attribute" outkey="138"/>
+																<entry name="surname" outkey="139"/>
+																<entry name="initials" outkey="158"/>
+																<entry name="orgName" outkey="140"/>
+																<entry name="email" outkey="141"/>
+																<entry name="address" outkey="231"/>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="artTitles" expanded="1">
+														<entry name="artTitle" outkey="1" expanded="1">
+															<entry name="lang" type="attribute" outkey="60"/>
+														</entry>
+													</entry>
+													<entry name="files" expanded="1">
+														<entry name="file" outkey="11"/>
+													</entry>
+													<entry name="abstracts" expanded="1">
+														<entry name="abstract" outkey="6" expanded="1">
+															<entry name="lang" type="attribute" outkey="65"/>
+														</entry>
+													</entry>
+													<entry name="codes" expanded="1">
+														<entry name="doi" outkey="49"/>
+													</entry>
+													<entry name="keywords" expanded="1">
+														<entry name="kwdGroup" expanded="1">
+															<entry name="keyword" outkey="57"/>
+														</entry>
+													</entry>
+													<entry name="references" expanded="1"/>
+													<entry name="artFunding" expanded="1">
+														<entry name="funding" expanded="1"/>
+													</entry>
+													<entry name="dates" expanded="1">
+														<entry name="dateReceived" outkey="189"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="25420429_2017_17_3_unicode.xsd" inputinstance="25420429_2017_17_3_unicode.xml" outputinstance="2017_17_3.xml" instanceroot="{}journal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="createIssn" library="user" blackbox="0" uid="329" kind="19" visible="0">
+					<view ltx="575" lty="46" rbx="701" rby="80"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="dateUni" inpkey="257" componentid="265"/>
+							<entry name="issn" inpkey="258" componentid="266"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="259" componentid="264"/>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="1" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" AddSchemaLocation="0"/>
+					<view ltx="1054" lty="-8" rbx="1427" rby="879"/>
+					<data>
+						<root scrollposition="202">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="ici-import" expanded="1">
+										<entry name="journal" expanded="1">
+											<entry name="issn" type="attribute" inpkey="55"/>
+										</entry>
+										<entry name="issue" expanded="1">
+											<entry name="number" type="attribute" inpkey="41"/>
+											<entry name="volume" type="attribute" inpkey="23"/>
+											<entry name="year" type="attribute" inpkey="32"/>
+											<entry name="publicationDate" type="attribute" inpkey="175"/>
+											<entry name="coverDate" type="attribute" inpkey="173"/>
+											<entry name="coverUrl" type="attribute" inpkey="17"/>
+											<entry name="electronicContentPdfUrl" type="attribute" inpkey="29"/>
+											<entry name="article" inpkey="38" expanded="1">
+												<entry name="type" inpkey="222"/>
+												<entry name="languageVersion" expanded="1">
+													<entry name="language" type="attribute" inpkey="99"/>
+													<entry name="title" inpkey="77"/>
+													<entry name="abstract" inpkey="93"/>
+													<entry name="pdfFileUrl" inpkey="12"/>
+													<entry name="publicationDate" inpkey="185"/>
+													<entry name="registrationDate" inpkey="186"/>
+													<entry name="pageFrom" inpkey="83"/>
+													<entry name="pageTo" inpkey="88"/>
+													<entry name="doi" inpkey="50"/>
+													<entry name="keywords" expanded="1">
+														<entry name="keyword" inpkey="74"/>
+													</entry>
+												</entry>
+												<entry name="languageVersion" expanded="1" clone="1">
+													<entry name="language" type="attribute" inpkey="102"/>
+													<entry name="title" inpkey="80"/>
+													<entry name="abstract" inpkey="96"/>
+													<entry name="pdfFileUrl" inpkey="14"/>
+													<entry name="publicationDate" inpkey="187"/>
+													<entry name="registrationDate" inpkey="188"/>
+													<entry name="pageFrom" inpkey="85"/>
+													<entry name="pageTo" inpkey="90"/>
+													<entry name="doi" inpkey="52"/>
+													<entry name="keywords" expanded="1">
+														<entry name="keyword" inpkey="71"/>
+													</entry>
+												</entry>
+												<entry name="authors" expanded="1">
+													<entry name="author" inpkey="132" expanded="1">
+														<entry name="name" inpkey="151"/>
+														<entry name="name2" inpkey="152"/>
+														<entry name="surname" inpkey="133"/>
+														<entry name="email" inpkey="134"/>
+														<entry name="polishAffiliation" inpkey="226"/>
+														<entry name="order" inpkey="228"/>
+														<entry name="instituteAffiliation" inpkey="135"/>
+														<entry name="departmentAffiliation" inpkey="136"/>
+													</entry>
+												</entry>
+												<entry name="references" expanded="1">
+													<entry name="reference" inpkey="235" expanded="1">
+														<entry name="unparsedContent" inpkey="153"/>
+														<entry name="order" inpkey="229"/>
+													</entry>
+												</entry>
+												<entry name="disciplineSciences" expanded="1">
+													<entry name="areaScience" inpkey="163"/>
+													<entry name="fieldScience" inpkey="169"/>
+													<entry name="disciplineScience" inpkey="166"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ic-import.xsd" outputinstance="ic-import.xml" instanceroot="{}ici-import"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="33" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="98"/>
+					</targets>
+					<view ltx="877" lty="224" rbx="931" rby="242"/>
+					<data>
+						<constant value="RU" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="34" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="101"/>
+					</targets>
+					<view ltx="884" lty="370" rbx="937" rby="388"/>
+					<data>
+						<constant value="EN" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+							<edge vertexkey="4" edgekey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="7" edgekey="8"/>
+							<edge vertexkey="9" edgekey="10"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="14" edgekey="15"/>
+							<edge vertexkey="113" edgekey="115"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="17" edgekey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="20" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="105" edgekey="116"/>
+							<edge vertexkey="249" edgekey="252"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="26" edgekey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="29" edgekey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="32" edgekey="33"/>
+							<edge vertexkey="104" edgekey="117"/>
+							<edge vertexkey="111" edgekey="118"/>
+							<edge vertexkey="257" edgekey="260"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="35" edgekey="36"/>
+							<edge vertexkey="107" edgekey="190"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="38" edgekey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="41" edgekey="42"/>
+							<edge vertexkey="106" edgekey="119"/>
+							<edge vertexkey="112" edgekey="120"/>
+							<edge vertexkey="250" edgekey="253"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="44" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="47" edgekey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="108" edgekey="121"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="54">
+						<edges>
+							<edge vertexkey="258" edgekey="261"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="57">
+						<edges>
+							<edge vertexkey="58" edgekey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="60">
+						<edges>
+							<edge vertexkey="61" edgekey="62"/>
+							<edge vertexkey="63" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="65">
+						<edges>
+							<edge vertexkey="66" edgekey="67"/>
+							<edge vertexkey="68" edgekey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="70">
+						<edges>
+							<edge vertexkey="71" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="73">
+						<edges>
+							<edge vertexkey="74" edgekey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76">
+						<edges>
+							<edge vertexkey="77" edgekey="78"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="79">
+						<edges>
+							<edge vertexkey="80" edgekey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="83" edgekey="84"/>
+							<edge vertexkey="85" edgekey="86"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="87">
+						<edges>
+							<edge vertexkey="88" edgekey="89"/>
+							<edge vertexkey="90" edgekey="91"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="92">
+						<edges>
+							<edge vertexkey="93" edgekey="94"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="95">
+						<edges>
+							<edge vertexkey="96" edgekey="97"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="98">
+						<edges>
+							<edge vertexkey="99" edgekey="100"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101">
+						<edges>
+							<edge vertexkey="102" edgekey="103"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="50" edgekey="122"/>
+							<edge vertexkey="52" edgekey="176"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114">
+						<edges>
+							<edge vertexkey="12" edgekey="124"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="137">
+						<edges>
+							<edge vertexkey="132" edgekey="208"/>
+							<edge vertexkey="235" edgekey="236"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="138">
+						<edges>
+							<edge vertexkey="206" edgekey="209"/>
+							<edge vertexkey="203" edgekey="210"/>
+							<edge vertexkey="200" edgekey="211"/>
+							<edge vertexkey="197" edgekey="212"/>
+							<edge vertexkey="237" edgekey="240"/>
+							<edge vertexkey="243" edgekey="246"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="139">
+						<edges>
+							<edge vertexkey="196" edgekey="213"/>
+							<edge vertexkey="255" edgekey="256"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="140">
+						<edges>
+							<edge vertexkey="202" edgekey="214"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="141">
+						<edges>
+							<edge vertexkey="205" edgekey="215"/>
+							<edge vertexkey="244" edgekey="247"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="154">
+						<edges>
+							<edge vertexkey="152" edgekey="159"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="155">
+						<edges>
+							<edge vertexkey="151" edgekey="160"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="158">
+						<edges>
+							<edge vertexkey="199" edgekey="216"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="164">
+						<edges>
+							<edge vertexkey="163" edgekey="165"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="167">
+						<edges>
+							<edge vertexkey="166" edgekey="168"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="170">
+						<edges>
+							<edge vertexkey="169" edgekey="171"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="172">
+						<edges>
+							<edge vertexkey="178" edgekey="180"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="179">
+						<edges>
+							<edge vertexkey="175" edgekey="181"/>
+							<edge vertexkey="173" edgekey="182"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="184">
+						<edges>
+							<edge vertexkey="187" edgekey="191"/>
+							<edge vertexkey="188" edgekey="192"/>
+							<edge vertexkey="186" edgekey="193"/>
+							<edge vertexkey="185" edgekey="194"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="189">
+						<edges>
+							<edge vertexkey="183" edgekey="195"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="198">
+						<edges>
+							<edge vertexkey="133" edgekey="217"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="201">
+						<edges>
+							<edge vertexkey="157" edgekey="218"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="204">
+						<edges>
+							<edge vertexkey="135" edgekey="219"/>
+							<edge vertexkey="136" edgekey="220"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="223">
+						<edges>
+							<edge vertexkey="222" edgekey="224"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="225">
+						<edges>
+							<edge vertexkey="226" edgekey="227"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="230">
+						<edges>
+							<edge vertexkey="228" edgekey="232"/>
+							<edge vertexkey="229" edgekey="233"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="231">
+						<edges>
+							<edge vertexkey="238" edgekey="241"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="239">
+						<edges>
+							<edge vertexkey="153" edgekey="242"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="245">
+						<edges>
+							<edge vertexkey="134" edgekey="248"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="251">
+						<edges>
+							<edge vertexkey="23" edgekey="254"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="259">
+						<edges>
+							<edge vertexkey="55" edgekey="262"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="selectRus" library="user" blackbox="0" uid="57" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="22" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="806" lty="140" rbx="-67" rby="17"/>
+					<data>
+						<constant value="RUS" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="23" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="11"/>
+						<datapoint pos="1" key="8"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="911" lty="135" rbx="-1" rby="-24"/>
+				</component>
+				<component name="leng" library="core" uid="19" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="634" lty="172" rbx="456" rby="-133"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="leng"/>
+					</data>
+				</component>
+				<component name="value" library="core" uid="20" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="640" lty="245" rbx="19" rby="-101"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="value"/>
+					</data>
+				</component>
+				<component name="result" library="core" uid="16" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="14"/>
+					</sources>
+					<view ltx="1184" lty="159" rbx="-357" rby="59"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="21" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="5"/>
+						<datapoint pos="1" key="2"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="1018" lty="139" rbx="228" rby="-162"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5" edgekey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8" edgekey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="11" edgekey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="14" edgekey="15"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="selectENG" library="user" blackbox="0" uid="55" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="24" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="14"/>
+					</sources>
+					<view ltx="1541" lty="100"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="26" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="11"/>
+						<datapoint pos="1" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="941" lty="165" rbx="29" rby="6"/>
+				</component>
+				<component name="leng" library="core" uid="27" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="664" lty="202" rbx="486" rby="-103"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="leng"/>
+					</data>
+				</component>
+				<component name="value" library="core" uid="28" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="670" lty="275" rbx="49" rby="-71"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="value"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="29" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="2"/>
+						<datapoint pos="1" key="8"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="1048" lty="169" rbx="258" rby="-132"/>
+				</component>
+				<component name="constant" library="core" uid="25" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="836" lty="170" rbx="-37" rby="47"/>
+					<data>
+						<constant value="ENG" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5" edgekey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8" edgekey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="11" edgekey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="14" edgekey="15"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="concatPages" library="user" blackbox="0" uid="56" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="from" library="core" uid="35" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="10"/>
+					</sources>
+					<view ltx="1541" lty="100" rbx="1591" rby="139"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="from"/>
+					</data>
+				</component>
+				<component name="to" library="core" uid="37" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="2"/>
+					</sources>
+					<view ltx="1555" lty="184" rbx="1592" rby="223"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="to"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="40" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="719" lty="303" rbx="763" rby="321"/>
+					<data>
+						<constant value="-" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="pages" library="core" uid="38" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="170" lty="135" rbx="249" rby="174"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="pages"/>
+					</data>
+				</component>
+				<component name="substring-before" library="core" uid="41" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="5"/>
+						<datapoint pos="1" key="15"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="795" lty="233" rbx="903" rby="289"/>
+				</component>
+				<component name="substring-after" library="core" uid="39" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="13"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="812" lty="297" rbx="912" rby="353"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5" edgekey="6"/>
+							<edge vertexkey="7" edgekey="8"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="10" edgekey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="13" edgekey="14"/>
+							<edge vertexkey="15" edgekey="16"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="filterLang" library="user" blackbox="0" uid="58" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="if-else" library="core" uid="52" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="17"/>
+						<datapoint/>
+						<datapoint pos="2" key="6"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="896" lty="159" rbx="993" rby="235"/>
+				</component>
+				<component name="rusValue" library="core" uid="50" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="20"/>
+					</sources>
+					<view ltx="1410" lty="362" rbx="1481" rby="401"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="rusValue"/>
+					</data>
+				</component>
+				<component name="engValue" library="core" uid="46" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="9"/>
+					</sources>
+					<view ltx="1429" lty="162" rbx="1502" rby="201"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="engValue"/>
+					</data>
+				</component>
+				<component name="value" library="core" uid="54" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="212" lty="307" rbx="287" rby="346"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="value"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="48" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="15"/>
+						<datapoint pos="1" key="4"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="19"/>
+					</targets>
+					<view ltx="892" lty="366" rbx="989" rby="442"/>
+				</component>
+				<component name="match-pattern" library="lang" uid="222" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="22"/>
+						<datapoint pos="1" key="23"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="580" lty="165" rbx="674" rby="221"/>
+				</component>
+				<component name="constant" library="core" uid="51" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="370" lty="232" rbx="484" rby="250"/>
+					<data>
+						<constant value=".*[А-Яа-яЁё]+.*" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="4" edgekey="5"/>
+							<edge vertexkey="6" edgekey="7"/>
+							<edge vertexkey="22" edgekey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="9" edgekey="10"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="23" edgekey="26"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="20" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="17" edgekey="27"/>
+							<edge vertexkey="15" edgekey="28"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="splitName" library="user" blackbox="0" uid="226" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="233" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="833" lty="273" rbx="876" rby="291"/>
+					<data>
+						<constant value=" " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="inicial" library="core" uid="228" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="729" lty="125" rbx="804" rby="164"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="inicial"/>
+					</data>
+				</component>
+				<component name="patronymic" library="core" uid="235" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="11"/>
+					</sources>
+					<view ltx="1400" lty="234" rbx="1481" rby="273"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="patronymic"/>
+					</data>
+				</component>
+				<component name="substring-after" library="core" uid="232" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="5"/>
+						<datapoint pos="1" key="6"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="1147" lty="228" rbx="1247" rby="284"/>
+				</component>
+				<component name="substring-before" library="core" uid="231" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+						<datapoint pos="1" key="2"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="1139" lty="119" rbx="1247" rby="175"/>
+				</component>
+				<component name="name" library="core" uid="234" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="14"/>
+					</sources>
+					<view ltx="1427" lty="130" rbx="1481" rby="169"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="name"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="6" edgekey="7"/>
+							<edge vertexkey="2" edgekey="8"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="1" edgekey="9"/>
+							<edge vertexkey="5" edgekey="10"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="11" edgekey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="14" edgekey="16"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="getEconomiAreaScience" library="user" blackbox="0" uid="237" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="238" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="1541" lty="100" rbx="1596" rby="139"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="239" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="1051" lty="106" rbx="1097" rby="124"/>
+					<data>
+						<constant value="1" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1" edgekey="3"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="disciplineScince" library="user" blackbox="0" uid="241" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="242" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="1541" lty="100" rbx="1596" rby="139"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="243" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="483" lty="143" rbx="535" rby="161"/>
+					<data>
+						<constant value="23" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1" edgekey="3"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="fieldScience" library="user" blackbox="0" uid="245" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="246" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="1541" lty="100" rbx="1596" rby="139"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="247" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="1035" lty="169" rbx="1081" rby="187"/>
+					<data>
+						<constant value="4" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1" edgekey="3"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="toXSDateTime" library="user" blackbox="0" uid="251" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="252" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="1541" lty="100" rbx="1596" rby="139"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="255" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="793" lty="125" rbx="836" rby="143"/>
+					<data>
+						<constant value=" " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="261" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="13"/>
+						<datapoint pos="1" key="19"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="20"/>
+					</targets>
+					<view ltx="657" lty="212" rbx="710" rby="268"/>
+				</component>
+				<component name="concat" library="core" uid="263" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="22"/>
+						<datapoint pos="1" key="23"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="763" lty="277" rbx="838" rby="335"/>
+				</component>
+				<component name="constant" library="core" uid="256" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="675" lty="172" rbx="721" rby="190"/>
+					<data>
+						<constant value="T" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="260" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="25"/>
+						<datapoint pos="1" key="26"/>
+						<datapoint pos="2" key="27"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="28"/>
+					</targets>
+					<view ltx="856" lty="197" rbx="953" rby="273"/>
+				</component>
+				<component name="constant" library="core" uid="258" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="21"/>
+					</targets>
+					<view ltx="695" lty="318" rbx="741" rby="336"/>
+					<data>
+						<constant value="0" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="replace" library="lang" uid="253" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="5"/>
+						<datapoint pos="1" key="6"/>
+						<datapoint pos="2" key="7"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="1034" lty="69" rbx="1126" rby="142"/>
+				</component>
+				<component name="string-length" library="core" uid="259" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="14"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="577" lty="154" rbx="664" rby="193"/>
+				</component>
+				<component name="vestnic_date" library="core" uid="254" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="45" lty="137" rbx="156" rby="176"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="vestnic_date"/>
+					</data>
+				</component>
+				<component name="checkMonth" library="user" blackbox="0" uid="283" kind="19" visible="0">
+					<view ltx="253" lty="111" rbx="362" rby="128"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="date" inpkey="36" componentid="266"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="37" componentid="265"/>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="262" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="18"/>
+					</targets>
+					<view ltx="546" lty="251" rbx="590" rby="269"/>
+					<data>
+						<constant value="18" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="36" edgekey="38"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="6" edgekey="10"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="22" edgekey="29"/>
+							<edge vertexkey="27" edgekey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="1" edgekey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="13" edgekey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="19" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="25" edgekey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="23" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="26" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="7" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="5" edgekey="39"/>
+							<edge vertexkey="14" edgekey="40"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="checkMonth" library="user" blackbox="0" uid="264" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="268" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="320" lty="192" rbx="358" rby="210"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="271" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="22"/>
+					</targets>
+					<view ltx="539" lty="149" rbx="583" rby="167"/>
+					<data>
+						<constant value="-" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="result" library="core" uid="265" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="23"/>
+					</sources>
+					<view ltx="1086" lty="171" rbx="1141" rby="210"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="276" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="17"/>
+					</targets>
+					<view ltx="267" lty="395" rbx="305" rby="413"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="substring" library="core" uid="275" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="11"/>
+						<datapoint pos="1" key="13"/>
+						<datapoint pos="2" key="12"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="14"/>
+					</targets>
+					<view ltx="404" lty="338" rbx="476" rby="411"/>
+				</component>
+				<component name="constant" library="core" uid="278" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="560" lty="369" rbx="606" rby="387"/>
+					<data>
+						<constant value="0" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="273" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="16"/>
+						<datapoint pos="1" key="33"/>
+						<datapoint pos="2" key="34"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="35"/>
+					</targets>
+					<view ltx="663" lty="325" rbx="747" rby="401"/>
+				</component>
+				<component name="if-else" library="core" uid="272" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="36"/>
+						<datapoint pos="1" key="37"/>
+						<datapoint pos="2" key="38"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="39"/>
+					</targets>
+					<view ltx="811" lty="223" rbx="908" rby="299"/>
+				</component>
+				<component name="substring" library="core" uid="267" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+						<datapoint pos="1" key="7"/>
+						<datapoint pos="2" key="2"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="423" lty="92" rbx="495" rby="165"/>
+				</component>
+				<component name="date" library="core" uid="266" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="106" lty="155" rbx="176" rby="194"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="date"/>
+					</data>
+				</component>
+				<component name="substring" library="core" uid="279" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="18"/>
+						<datapoint pos="1" key="21"/>
+						<datapoint pos="2" key="19"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="20"/>
+					</targets>
+					<view ltx="416" lty="482" rbx="488" rby="555"/>
+				</component>
+				<component name="equal" library="core" uid="270" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="24"/>
+						<datapoint pos="1" key="10"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="627" lty="191" rbx="680" rby="247"/>
+				</component>
+				<component name="constant" library="core" uid="269" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="344" lty="151" rbx="382" rby="169"/>
+					<data>
+						<constant value="7" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="277" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="307" lty="452" rbx="345" rby="470"/>
+					<data>
+						<constant value="6" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="string-length" library="core" uid="281" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="27"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="28"/>
+					</targets>
+					<view ltx="140" lty="554" rbx="227" rby="593"/>
+				</component>
+				<component name="subtract" library="core" uid="282" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="30"/>
+						<datapoint pos="1" key="31"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="32"/>
+					</targets>
+					<view ltx="323" lty="568" rbx="398" rby="626"/>
+				</component>
+				<component name="constant" library="core" uid="280" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="29"/>
+					</targets>
+					<view ltx="283" lty="498" rbx="321" rby="516"/>
+					<data>
+						<constant value="6" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="285" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="59"/>
+					</targets>
+					<view ltx="102" lty="658" rbx="140" rby="676"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="subtract" library="core" uid="284" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="60"/>
+						<datapoint pos="1" key="61"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="62"/>
+					</targets>
+					<view ltx="240" lty="606" rbx="315" rby="664"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="1" edgekey="5"/>
+							<edge vertexkey="38" edgekey="40"/>
+							<edge vertexkey="11" edgekey="41"/>
+							<edge vertexkey="18" edgekey="42"/>
+							<edge vertexkey="27" edgekey="43"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="2" edgekey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="10" edgekey="44"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="7" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="16" edgekey="46"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="12" edgekey="47"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="13" edgekey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="34" edgekey="49"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="24" edgekey="50"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="36" edgekey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="33" edgekey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="30" edgekey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="21" edgekey="54"/>
+							<edge vertexkey="60" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="19" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="37" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="23" edgekey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="59">
+						<edges>
+							<edge vertexkey="61" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="31" edgekey="65"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="normolazeDateRecived" library="user" blackbox="0" uid="286" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="287" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="4"/>
+					</sources>
+					<view ltx="1541" lty="100" rbx="1596" rby="139"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="date" library="core" uid="289" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="143" lty="209" rbx="213" rby="248"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="date"/>
+					</data>
+				</component>
+				<component name="doajDate" library="user" blackbox="0" uid="288" kind="19" visible="0">
+					<view ltx="331" lty="194" rbx="446" rby="211"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="vDate" inpkey="1" componentid="145"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="5" componentid="131"/>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="291" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="443" lty="301" rbx="531" rby="319"/>
+					<data>
+						<constant value="T00:00:00" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="290" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="8"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="634" lty="176" rbx="709" rby="234"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="7" edgekey="10"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="8" edgekey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="4" edgekey="12"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="getType" library="user" blackbox="0" uid="297" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="298" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="1541" lty="100" rbx="1596" rby="139"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="299" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="364" lty="146" rbx="500" rby="164"/>
+					<data>
+						<constant value="ORIGINAL_ARTICLE" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1" edgekey="3"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="getPolishAffiliation" library="user" blackbox="0" uid="301" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="302" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="1541" lty="100" rbx="1596" rby="139"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="303" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="859" lty="261" rbx="915" rby="279"/>
+					<data>
+						<constant value="false" datatype="anySimpleType"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1" edgekey="3"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="setEmailWithDefault" library="user" blackbox="0" uid="306" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="307" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="7"/>
+					</sources>
+					<view ltx="1541" lty="100" rbx="1596" rby="139"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="lang" library="core" uid="308" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="236" lty="184" rbx="305" rby="223"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="lang"/>
+					</data>
+				</component>
+				<component name="email" library="core" uid="309" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="83" lty="244" rbx="156" rby="283"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="email"/>
+					</data>
+				</component>
+				<component name="exists" library="core" uid="315" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="10"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="765" lty="290" rbx="832" rby="329"/>
+				</component>
+				<component name="selectENG" library="user" blackbox="0" uid="310" kind="19" visible="0">
+					<view ltx="655" lty="185" rbx="769" rby="219"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="leng" inpkey="1" componentid="27"/>
+							<entry name="value" inpkey="2" componentid="28"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="8" componentid="24"/>
+						</root>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="316" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="13"/>
+						<datapoint pos="1" key="14"/>
+						<datapoint pos="2" key="15"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="992" lty="218" rbx="1089" rby="294"/>
+				</component>
+				<component name="surname" library="core" uid="319" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="22"/>
+					</targets>
+					<view ltx="305" lty="353" rbx="396" rby="392"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="surname"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="318" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="401" lty="485" rbx="562" rby="503"/>
+					<data>
+						<constant value="economics@vestnik.nsu.ru" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="325" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="26"/>
+						<datapoint pos="1" key="27"/>
+						<datapoint pos="2" key="28"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="29"/>
+					</targets>
+					<view ltx="751" lty="353" rbx="848" rby="429"/>
+				</component>
+				<component name="value-map" library="core" uid="323" kind="23">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="30"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="31"/>
+					</targets>
+					<view ltx="442" lty="359" rbx="519" rby="398"/>
+					<data>
+						<wsdl/>
+						<valuemap enableDefaultValue="1">
+							<valuemapTable>
+								<entry from="Бекарева" to=" s.bekareva@mail.ru"/>
+								<entry from="Bekareva" to=" s.bekareva@mail.ru"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="empty" library="lang" uid="326" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="38"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="39"/>
+					</targets>
+					<view ltx="391" lty="416" rbx="460" rby="455"/>
+				</component>
+				<component name="exists" library="core" uid="324" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="23"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="580" lty="325" rbx="647" rby="364"/>
+				</component>
+				<component name="logical-not" library="core" uid="327" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="42"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="43"/>
+					</targets>
+					<view ltx="505" lty="406" rbx="581" rby="445"/>
+				</component>
+				<component name="logical-and" library="core" uid="328" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="44"/>
+						<datapoint pos="1" key="45"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="46"/>
+					</targets>
+					<view ltx="623" lty="391" rbx="702" rby="449"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="1" edgekey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="2" edgekey="6"/>
+							<edge vertexkey="10" edgekey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="14" edgekey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="13" edgekey="19"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="7" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="30" edgekey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="44" edgekey="47"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="28" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="15" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="23" edgekey="36"/>
+							<edge vertexkey="27" edgekey="37"/>
+							<edge vertexkey="38" edgekey="40"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="42" edgekey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="45" edgekey="49"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="26" edgekey="50"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
