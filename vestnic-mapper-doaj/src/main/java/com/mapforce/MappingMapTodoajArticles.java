@@ -676,7 +676,7 @@ public class MappingMapTodoajArticles extends com.altova.TraceProvider
 			}
 			private boolean moveNext_11() throws Exception {
 				state = 0;				
-				current = "10.25205/1818-7862";
+				current = "10.25205/1818-7862-";
 				pos++;
 				return true;
 			}
