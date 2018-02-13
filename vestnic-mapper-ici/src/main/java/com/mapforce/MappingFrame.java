@@ -119,7 +119,7 @@ public class MappingFrame extends JFrame implements com.altova.TraceTarget {
 		jName25420429_2017_17_3_unicodeLabel0.setText("Source instance of Name25420429_2017_17_3_unicode.xsd:");
 		jName25420429_2017_17_3_unicodeLabel0.setBounds(new Rectangle(15, 10, 438, 23));
 		jPanelStructures.add(jName25420429_2017_17_3_unicodeLabel0, null);
-		jName25420429_2017_17_3_unicodeTextField0.setText("C:/Users/test-1/Desktop/ic-import/25420429_2017_17_3_unicode.xml");
+		jName25420429_2017_17_3_unicodeTextField0.setText("C:/Users/test-1/Desktop/25420429_2017_17_2_unicode.xml");
 		jName25420429_2017_17_3_unicodeTextField0.setBounds(new Rectangle(15, 35, 438, 23));
 		jName25420429_2017_17_3_unicodeTextField0.setEditable(false);
 		jPanelStructures.add(jName25420429_2017_17_3_unicodeTextField0, null);
@@ -191,7 +191,7 @@ public class MappingFrame extends JFrame implements com.altova.TraceTarget {
 			// MappingMapToic_importObject.setCloseObjectsAfterRun(false);
 
 			{
-				com.altova.io.Input Name25420429_2017_17_3_unicode2Source = com.altova.io.StreamInput.createInput("C:/Users/test-1/Desktop/ic-import/25420429_2017_17_3_unicode.xml");
+				com.altova.io.Input Name25420429_2017_17_3_unicode2Source = com.altova.io.StreamInput.createInput("C:/Users/test-1/Desktop/25420429_2017_17_2_unicode.xml");
 				com.altova.io.Output ic_import2Target = new com.altova.io.FileOutput("C:/Users/test-1/Desktop/ic-import/ic-import.xml");
 
 				MappingMapToic_importObject.run(
