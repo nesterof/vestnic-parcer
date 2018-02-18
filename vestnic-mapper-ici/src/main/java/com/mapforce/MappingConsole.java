@@ -61,7 +61,7 @@ public class MappingConsole {
 			// MappingMapToic_importObject.setCloseObjectsAfterRun(false);
 
 			{
-				com.altova.io.Input Name25420429_2017_17_3_unicode2Source = com.altova.io.StreamInput.createInput("C:/Users/test-1/Desktop/25420429_2017_17_2_unicode.xml");
+				com.altova.io.Input Name25420429_2017_17_3_unicode2Source = com.altova.io.StreamInput.createInput("C:/Users/test-1/Desktop/18.02.IC/2015.1.xml");
 				com.altova.io.Output ic_import2Target = new com.altova.io.FileOutput("C:/Users/test-1/Desktop/ic-import/ic-import.xml");
 
 				MappingMapToic_importObject.run(
